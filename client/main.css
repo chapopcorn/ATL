@@ -2,3 +2,28 @@ body {
   padding: 10px;
   font-family: sans-serif;
 }
+
+.Home{
+  text-align: center;
+}
+.Notfoundh1{
+  font-size: 5em;
+}
+
+.Notfoundbody{
+  text-align: center;
+}
+
+.logo{
+  text-align: left;
+  font-size: 1px;
+  padding-right: 50px;
+  padding-top: 5px;
+}
+
+.carousel{
+	height: 100vh ;
+}
+.carousel-item{
+	height: 50vh;
+}

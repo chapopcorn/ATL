@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import Image from 'react-image-resizer';
+import Footer from './Footer.js';
 
 class About extends Component{
 	render(){
@@ -48,7 +49,7 @@ class About extends Component{
     			</div>
 		</div>
 			
-			
+		<Footer/> 	
 		</div>
 	
 

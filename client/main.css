@@ -1,4 +1,71 @@
 body {
-  padding: 10px;
   font-family: sans-serif;
 }
+
+.btn{
+margin-right: 10px;
+margin-bottom: 10px;
+}
+
+.brand-logo{
+font-size: 30px;
+}
+
+.contact-pic {
+    background-image: url("images/chair.jpg");
+    height: 100vh;
+    background-size: cover;
+}
+
+#row-1{
+padding: 20%;
+text-align: center;
+color: white;
+background-image: url("images/beach-house.jpeg");
+}
+
+#row-2{
+padding: 20%;
+text-align: center;
+color: white;
+background-image: url("images/apartment.jpg");
+}
+
+#row-3{
+padding: 10px;
+}
+
+#contact{
+margin-top: 10%;
+}
+
+#user-info{
+padding: 10%;
+}
+
+#user-pic{
+padding-top: 5%;
+}
+
+#blue{
+color: #4fc3f7;
+}
+
+.input-field input[type=text]:focus + label, .materialize-textarea:focus:not([readonly]) + label {
+	color: #4fc3f7 !important;
+  }
+
+.input-field input[type=email]:focus + label, .materialize-textarea:focus:not([readonly]) + label {
+     color: #4fc3f7 !important;  
+}
+
+
+.input-field input[type=text]:focus, .materialize-textarea:focus:not([readonly]) {
+   border-bottom: 1px solid #4fc3f7 !important;
+   box-shadow: 0 1px 0 0 #4fc3f7 !important;
+}
+
+.input-field input[type=email]:focus, .materialize-textarea:focus:not([readonly]) {
+   border-bottom: 1px solid #4fc3f7 !important;
+   box-shadow: 0 1px 0 0 #4fc3f7 !important;
+ }

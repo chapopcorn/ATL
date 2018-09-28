@@ -5,12 +5,14 @@ import About from './About.js';
 import Contact from './Contact.js';
 import Signup from './accounts/Signup.js';
 import Login from './accounts/Login.js';
+import Image from 'react-image-resizer';
 
 
 class Navbar extends Component{
 
 	render(){
 		return(
+			<div>
 			<nav>
 				<div class="nav-wrapper light-blue lighten-2">
 					<a href="#" class="brand-logo">Logo</a>
@@ -23,10 +25,13 @@ class Navbar extends Component{
 					</ul>
 				</div>
 			</nav>
-
+			</div>
 		)
 	}
 }
+
+  
+        
 
 export default Navbar
         

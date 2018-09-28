@@ -6,6 +6,7 @@ import Signup from './accounts/Signup.js';
 import Login from './accounts/Login.js';
 import Notfound from './Notfound.js';
 import Profile from './Profile.js';
+import Search from './Search.js';
 
 FlowRouter.route('/',{
 	name: 'Home',
@@ -47,6 +48,13 @@ FlowRouter.route('/profile',{
 	name: 'Profile',
 	action: ()=>{
 		mount(Profile, {})
+	}
+});
+
+FlowRouter.route('/search',{
+	name: 'Search',
+	action: ()=>{
+		mount(Search, {})
 	}
 });
 

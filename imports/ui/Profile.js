@@ -40,17 +40,29 @@ class Profile extends Component {
 				<h2 id='blue'>Inbox</h2>
 				  <div class="section">
 				    <h5>Message 1</h5>
-				    <p>Stuff</p>
+				    <p>
+					Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+					tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+					quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo 
+				    </p>
 				  </div>
 				  <div class="divider"></div>
 				  <div class="section">
 				    <h5>Message 2</h5>
-				    <p>Stuff</p>
+				    <p>
+					Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+					tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+					quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo 
+				    </p>
 				  </div>
 				  <div class="divider"></div>
 				  <div class="section">
 				    <h5>Message 3</h5>
-				    <p>Stuff</p>
+				    <p>
+					Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+					tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+					quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo 
+				    </p>
 				  </div>
 			
 				</div>

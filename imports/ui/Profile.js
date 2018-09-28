@@ -31,6 +31,9 @@ class Profile extends Component {
 					 <button class="btn waves-effect waves-light light-blue lighten-1" type="submit" name="action">Settings
 					    <i class="material-icons right">settings</i>
 					  </button>
+					 <button class="btn waves-effect waves-light light-blue lighten-1" type="submit" name="action">Delete
+					    <i class="material-icons right">do_not_disturb</i>
+					  </button>
 				  </div>
 				  <div class="divider"></div>
    			</div>

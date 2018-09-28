@@ -18,6 +18,7 @@ font-size: 30px;
 }
 
 #row-1{
+margin-top: 0;
 padding: 20%;
 text-align: center;
 color: white;
@@ -25,6 +26,7 @@ background-image: url("images/beach-house.jpeg");
 }
 
 #row-2{
+margin-top: 0;
 padding: 20%;
 text-align: center;
 color: white;
@@ -69,3 +71,34 @@ color: #4fc3f7;
    border-bottom: 1px solid #4fc3f7 !important;
    box-shadow: 0 1px 0 0 #4fc3f7 !important;
  }
+
+.Home{
+  text-align: center;
+}
+.Notfoundh1{
+  font-size: 5em;
+}
+
+.Notfoundbody{
+  text-align: center;
+}
+
+.logo{
+  text-align: left;
+  font-size: 1px;
+  padding-right: 50px;
+  padding-top: 5px;
+}
+
+.carousel{
+	height: 100vh ;
+}
+.carousel-item{
+	height: 50vh;
+}
+
+.navbar-default{ margin-bottom: 0; }
+
+#nav-pic{
+margin-top: 10px;
+}

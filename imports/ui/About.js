@@ -3,6 +3,7 @@ import Image from 'react-image-resizer';
 import Footer from './Footer.js';
 
 class About extends Component{
+
 	render(){
 		return(
 		<div class=''>

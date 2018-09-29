@@ -19,6 +19,7 @@ class Navbar extends Component{
 				<div className="logo">
 					<a href="/" className="brand-logo">
 				 <img src="images/logo.png" className="circle responsive-img" width="42" height="42"/></a>
+				 
 				</div>
 					<ul id="nav-mobile" className="right hide-on-med-and-down">
 					<li><a href='/'>Home</a></li>

@@ -5,6 +5,7 @@ import About from './About.js';
 import Contact from './Contact.js';
 import Signup from './accounts/Signup.js';
 import Login from './accounts/Login.js';
+import Image from 'react-image-resizer';
 
 
 class Navbar extends Component{
@@ -19,7 +20,7 @@ class Navbar extends Component{
 				<div className="logo">
 					<a href="/" className="brand-logo">
 				 <img src="images/logo.png" className="circle responsive-img" width="42" height="42"/></a>
-				 
+
 				</div>
 					<ul id="nav-mobile" className="right hide-on-med-and-down">
 					<li><a href='/'>Home</a></li>
@@ -35,5 +36,8 @@ class Navbar extends Component{
 		)
 	}
 }
+
+
+
 
 export default Navbar

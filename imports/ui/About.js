@@ -4,6 +4,15 @@ import Footer from './Footer.js';
 
 class About extends Component{
 
+componentDidMount(){
+
+$(document).ready(function(){
+    $('.carousel').carousel();
+  });
+
+$('.carousel.carousel-slider').carousel({fullWidth: true});
+}
+
 	render(){
 		return(
 		<div class=''>
@@ -47,9 +56,64 @@ class About extends Component{
 					and budget
      				 </div>
 			</div>
+
     			</div>
+			<div class='row'> 
+				<div class="col s12">
+				<h3 align="center">Meet The Team</h3>
+				ALT (Apartment Locator) is a property app that allows users to
+				advertise available land and homes for rent or sell (agent free),
+				at the same time it also allows user to look for land and homes as.
+			</div>
+
+    			</div>
+<div class="row">
+  <div class="col m4">
+    <div class="card">
+      <div class="card-image">
+        <img src="images/card.jpg"/>
+        <span class="card-title activator white-text">Card Title</span>
+      </div>
+      <div class="card-content">
+        <p>I am a very simple card. I am good at containing small bits of information. I am convenient because I require little markup to use effectively.</p>
+      </div>
+      <div class="card-action">
+        <a href="#">This is a link</a>
+      </div>
+    </div>
+  </div>
+   <div class="col m4">
+    <div class="card">
+      <div class="card-image">
+        <img src="images/card.jpg"/>
+        <span class="card-title activator white-text">Card Title</span>
+      </div>
+      <div class="card-content">
+        <p>I am a very simple card. I am good at containing small bits of information. I am convenient because I require little markup to use effectively.</p>
+      </div>
+      <div class="card-action">
+        <a href="#">This is a link</a>
+      </div>
+    </div>
+  </div>
+  <div class="col m4">
+    <div class="card">
+      <div class="card-image">
+        <img src="images/card.jpg"/>
+        <span class="card-title activator white-text">Card Title</span>
+      </div>
+      <div class="card-content">
+        <p>I am a very simple card. I am good at containing small bits of information. I am convenient because I require little markup to use effectively.</p>
+      </div>
+      <div class="card-action">
+        <a href="#">This is a link</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+		
 		</div>
-			
 		<Footer/> 	
 		</div>
 	

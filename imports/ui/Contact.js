@@ -39,10 +39,11 @@ class Contact extends Component {
 					</div>
 					<div class="row">
                           <div class="input-field col s12">
-			    
-                            <button class="btn-large light-blue lighten-1 waves-effect waves-light right" type="submit"
-				 name="action">Send
-                            </button>
+
+			  	<button class="btn waves-effect waves-light light-blue lighten-1 right" 
+				type="submit" name="action">Send
+					    <i class="material-icons right">send</i>
+				</button>
                           </div>
                         </div>
     					</form>

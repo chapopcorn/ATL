@@ -100,5 +100,10 @@ color: #4fc3f7;
 .navbar-default{ margin-bottom: 0; }
 
 #nav-pic{
-margin-top: 10px;
+
+vertical-align: middle;
+margin-right: 50px;
 }
+
+.carousel .carousel-item {
+width:600px !important;}

@@ -19,22 +19,22 @@ $(document).ready(function(){
 		<div>
 		<div class='row'>
 				<div class="col s12">
-					
+
 				</div>
 		</div>
 		<div class="row">
 			<div class="col s4" id='user-pic'>
-			      <Image src="images/user.png" width={300} height={300} alt="" 
+			      <Image src="images/user.png" width={300} height={300} alt=""
 				class="circle responsive-img"/>
 			 </div>
-			    
+
 			<div class="col s8">
 				  <div class="section" id='user-info'>
 				    <h5 id='blue'>User Name</h5>
-				    
+
 					Buyer | Seller<br/>
-					Lusaka, Zambia<br/> 
-					+26 123 456 789<br/> 
+					Lusaka, Zambia<br/>
+					+26 123 456 789<br/>
 				    	<br/>
 					 <button class="btn waves-effect waves-light light-blue lighten-1"
 						type="submit" name="action">Settings
@@ -43,12 +43,12 @@ $(document).ready(function(){
 					 <button class="btn waves-effect waves-light light-blue lighten-1" type="submit" name="action">Add Property
 					    <i class="material-icons right">home</i>
 					  </button>
-					 
+
 				  </div>
 				  <div class="divider"></div>
    			</div>
 				</div>
-				
+
 	<div class='container'>
 		  <div class="row">
 		    <div class="col s12">
@@ -73,7 +73,7 @@ $(document).ready(function(){
 				    <p>
 					Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
 					tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-					quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo 
+					quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
 				    </p>
 				  </div>
 				  <div class="divider"></div>
@@ -82,7 +82,7 @@ $(document).ready(function(){
 				    <p>
 					Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
 					tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-					quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo 
+					quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
 				    </p>
 				  </div>
 				  <div class="divider"></div>
@@ -91,10 +91,10 @@ $(document).ready(function(){
 				    <p>
 					Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
 					tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-					quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo 
+					quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
 				    </p>
 				  </div>
-			
+
 				</div>
 		</div>
 	</div>
@@ -111,7 +111,7 @@ $(document).ready(function(){
 					<p>
 					Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
 					tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-					quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo 
+					quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
 				    	</p>
 				</div>
 			</div>
@@ -125,7 +125,7 @@ $(document).ready(function(){
 					<p>
 					Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
 					tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-					quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo 
+					quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
 				    	</p>
 				</div>
 			</div>
@@ -139,7 +139,7 @@ $(document).ready(function(){
 					<p>
 					Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
 					tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-					quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo 
+					quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
 				    	</p>
 				</div>
 			</div>
@@ -150,7 +150,7 @@ $(document).ready(function(){
 	</div>
 		<Footer/>
 		</div>
-		
+
 		);
 
 	}

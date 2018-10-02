@@ -31,6 +31,7 @@ componentDidMount(){
 	render(){
 
 		return(
+
 			<div>
 			<nav class="light-blue lighten-2 nav-wrapper">
 
@@ -57,14 +58,13 @@ componentDidMount(){
 			  </a>
 			</nav>
 			</div>
+
+
 		)
 	}
 }
 
-  
-        
+
 
 export default Navbar
-
-
 

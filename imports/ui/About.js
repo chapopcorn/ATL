@@ -72,13 +72,14 @@ $('.carousel.carousel-slider').carousel({fullWidth: true});
     <div class="card">
       <div class="card-image">
         <img src="images/card.jpg"/>
-        <span class="card-title activator white-text">Card Title</span>
+        <span class="card-title activator white-text">Jackie Chapoloko</span>
       </div>
       <div class="card-content">
-        <p>I am a very simple card. I am good at containing small bits of information. I am convenient because I require little markup to use effectively.</p>
-      </div>
-      <div class="card-action">
-        <a href="#">This is a link</a>
+        <p>Im still not at the level I would like to be, but I'm growing 
+          my developer skills each day thanks to Hackers Guild!!!</p>
+        <a href="#" class='center' ><img src="images/twitter.png"  alt="twitter icon"/></a>
+	<a href="#" class='center'><img src="images/github.png"  alt="github icon"/></a>
+	<a href="#" class='center'><img src="images/email.png"  alt="email icon"/></a>
       </div>
     </div>
   </div>
@@ -86,13 +87,14 @@ $('.carousel.carousel-slider').carousel({fullWidth: true});
     <div class="card">
       <div class="card-image">
         <img src="images/card.jpg"/>
-        <span class="card-title activator white-text">Card Title</span>
+        <span class="card-title activator white-text">Alvin Mwewa</span>
       </div>
       <div class="card-content">
-        <p>I am a very simple card. I am good at containing small bits of information. I am convenient because I require little markup to use effectively.</p>
-      </div>
-      <div class="card-action">
-        <a href="#">This is a link</a>
+                <p>Im still not at the level I would like to be, but I'm growing 
+          my developer skills each day thanks to Hackers Guild!!!</p>
+        <a href="#" class='center' ><img src="images/twitter.png"  alt="twitter icon"/></a>
+	<a href="#" class='center'><img src="images/github.png"  alt="github icon"/></a>
+	<a href="#" class='center'><img src="images/email.png"  alt="email icon"/></a>
       </div>
     </div>
   </div>
@@ -100,13 +102,14 @@ $('.carousel.carousel-slider').carousel({fullWidth: true});
     <div class="card">
       <div class="card-image">
         <img src="images/card.jpg"/>
-        <span class="card-title activator white-text">Card Title</span>
+        <span class="card-title activator white-text">Grace Banda</span>
       </div>
       <div class="card-content">
-        <p>I am a very simple card. I am good at containing small bits of information. I am convenient because I require little markup to use effectively.</p>
-      </div>
-      <div class="card-action">
-        <a href="#">This is a link</a>
+                <p>Im still not at the level I would like to be, but I'm growing 
+          my developer skills each day thanks to Hackers Guild!!!</p>
+        <a href="#" class='center' ><img src="images/twitter.png"  alt="twitter icon"/></a>
+	<a href="#" class='center'><img src="images/github.png"  alt="github icon"/></a>
+	<a href="#" class='center'><img src="images/email.png"  alt="email icon"/></a>
       </div>
     </div>
   </div>

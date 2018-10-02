@@ -12,9 +12,9 @@ font-size: 30px;
 }
 
 .contact-pic {
-    background-image: url("images/chair.jpg");
-    height: 100vh;
-    background-size: cover;
+   background-image: url("images/chair.jpg");
+   height: 100vh;
+   background-size: cover;
 }
 
 #row-1{
@@ -53,12 +53,16 @@ padding-top: 5%;
 color: #4fc3f7;
 }
 
+.center{
+  text-align: center;
+}
+
 .input-field input[type=text]:focus + label, .materialize-textarea:focus:not([readonly]) + label {
 	color: #4fc3f7 !important;
   }
 
 .input-field input[type=email]:focus + label, .materialize-textarea:focus:not([readonly]) + label {
-     color: #4fc3f7 !important;  
+     color: #4fc3f7 !important;
 }
 
 
@@ -74,7 +78,22 @@ color: #4fc3f7;
 
 .Home{
   text-align: center;
+  background-image: url('images/Windhoek-City-Views.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding-top: 150px;
+  padding-bottom: 150px;
 }
+
+.divindiv{
+  padding-top:75px;
+  padding-bottom:75px;
+  padding-left: 300px;
+  padding-right: 300px;
+  background-color: #060606b3;
+  color: white;
+}
+
 .Notfoundh1{
   font-size: 5em;
 }
@@ -105,5 +124,31 @@ vertical-align: middle;
 margin-right: 50px;
 }
 
+
 .carousel .carousel-item {
 width:600px !important;}
+
+
+.fa {
+  padding: 20px;
+  font-size: 30px;
+  width: 50px;
+  text-align: center;
+  text-decoration: none;
+  margin: 5px 2px;
+}
+
+.fa:hover {
+    opacity: 0.7;
+}
+
+.fa-facebook {
+  background: #3B5998;
+  color: white;
+}
+
+.fa-google {
+  background: #dd4b39;
+  color: white;
+}
+

@@ -9,6 +9,19 @@ import Notfound from './Notfound.js';
 import Navbar from './Navbar.js';
 
 class App extends Component{
+	logoutUser = (e) => {
+	e.preventDefault();
+	Meteor.logout((err) => {
+		if (err){
+			console.log(err.reason);
+		}
+		else {
+			FlowRouter.go('/')
+		}
+	}
+	)
+}
+
 
 	render(){
 		return(
@@ -21,6 +34,3 @@ class App extends Component{
 }
 
 export default App
-
-
-					

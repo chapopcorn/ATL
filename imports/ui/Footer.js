@@ -7,7 +7,7 @@ class Footer extends Component{
 			<div>
 		<div class='row'>
 				<div class="col s12">
-					
+
 				</div>
 		</div>
 			<footer class="page-footer light-blue lighten-1">

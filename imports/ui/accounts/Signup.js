@@ -3,7 +3,36 @@ import {meteor} from 'meteor/meteor';
 import Footer from '../Footer.js';
 
 class Signup extends React.Component{
+	newUser = e =>{
+	     e.preventDefault()
+	     const {target} = e;
+	     const name = target.name.value
+	      const password= target.password.value
+	       const email= target.email.value
+				 const surname = target.surname.value
+				 const city = target.city.value
+	        const profile = {
+	          email,
+	          name,
+						surname,
+						city,
+	        };
+	        const user = {
+	          email,password,
+	          profile,
+	        }
 
+	        Accounts.createUser(user, (err) =>{
+	          if (err)
+	          {
+	            console.log(err.reason);
+	          }
+	          else {
+	        FlowRouter.go('/')
+	         }
+	       }
+	      );
+			}
 	render(){
 		return(
 			<div>
@@ -32,10 +61,7 @@ class Signup extends React.Component{
 										 <label htmlFor="surname">Surname</label>
 									 </div>
 								 </div>
-								 <div className="input-feild s6 l6">
-									 <input id="country" type="text" className="input" name="country"/>
-									 <label htmlFor="country">Country</label>
-								 </div>
+
 								 <div className="input-feild s6 l6">
 									 <input id="city" type="text" className="input" name="city"/>
 									 <label htmlFor="city">City</label>
@@ -52,7 +78,8 @@ class Signup extends React.Component{
 										 </div>
 									 </div>
 								 </div>
-								 <button className="btn waves-effect waves-light light-blue lighten-1" type="submit" name="action">S i g n U p</button>
+								 <button className="btn waves-effect waves-light light-blue lighten-1" type="submit"
+								  name="action">S i g n U p</button>
 								 <hr/>
 							 </form><p>| <a href="/login">  already have an account</a></p>
 					</div>

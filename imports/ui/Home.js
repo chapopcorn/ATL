@@ -7,16 +7,23 @@ import { withTracker } from 'meteor/react-meteor-data';
 
 class Home extends Component {
 
+
 componentDidMount(){
   var element = ReactDOM.findDOMNode(this.refs.dropdown)
 
   $(element).ready(function() {
   $('select').material_select();
   	});
-		
-  $('.carousel.carousel-slider').carousel({
-  fullWidth: true
+
+
+	$(document).ready(function(){
+	 $('#demo-carousel-content').carousel();
+	  setInterval(function() {
+	    $('#demo-carousel-content').carousel('next');
+	  }, 6000);
+
 	});
+	
 }
 
 displayUser=()=>{
@@ -32,9 +39,11 @@ displayUser=()=>{
                       <div class="row">
                         <div class="col s12">
                           <div class="card horizontal">
+
                             <div class="card-image width-65">
                               <img src="images/house.jpeg"/>
                             </div>
+
                             <div class="card-stacked">
                               <div class="card-content">
 				<h4 class="header" id ='blue'>{blog.title}</h4>
@@ -50,30 +59,46 @@ displayUser=()=>{
                                 <a class="waves-effect waves-light btn box-shadow light-blue lighten-1">Contact Owner</a>
                               </div>
                             </div>
+
                           </div>
                         </div>
                       </div>
                     </div>
+
                   </div>
+
                 </div>
-	
 	</div>
         )
       }
     )
-    }
+    };
+
 
 
 	render(){
-	return (
+		return (
 		<div>
-			  <div className="carousel carousel-slider">
-			    <a className="carousel-item" href="#one!"><img src="images/Windhoek-City-Views.jpg"/></a>
-			    <a className="carousel-item" href="#two!"><img src="images/outside.jpg"/></a>
-			    <a className="carousel-item" href="#three!"><img src="images/royal-livingstone-resort-exterior.jpg"/></a>
-			    <a className="carousel-item" href="#four!"><img src="images/Lusaka-city-e1526817745754.jpg"/></a>
-			  </div>
+		<div className="container">
+		<div className="carousel carousel-slider" id="demo-carousel-content" data-indicators="true" >
 
+	  <a className="carousel-item" href="#one!"><img src="images/royal-livingstone-resort-exterior.jpg"/></a>
+
+
+	   <div className="carousel-fixed-item center">
+		 	<img src="images/logo.png" className="circle responsive-img"/>
+	     <h2 id="blue">ATL</h2>
+	      <p id="blue">Apartment Locator</p>
+	      <button  href="/about" className="btn waves-effect waves-light light-blue lighten-1" type="submit" name="action">M o r e i n f o r</button>
+	    </div>
+
+	    <a className="carousel-item" href="#two!"><img src="images/Windhoek-City-Views.jpg"/>
+	      </a>
+	   <a className="carousel-item" href="#two!"><img src="/home/alvin2/ATL/public/images/outside.jpg"/>
+	      </a>
+
+	  </div>
+		</div>
 
 		<div className='container'>
 			<div className='row'>
@@ -135,7 +160,7 @@ displayUser=()=>{
 					</form>
 				</div>
 			</div>
-			
+
 
 			<div className="container">
 					<div className="row">

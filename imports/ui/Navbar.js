@@ -12,20 +12,31 @@ class Navbar extends Component{
 
 componentDidMount(){
   $(document).ready(function(){
-    
+
 	$('.sidenav-trigger').sideNav({
 	      menuWidth: 300,
 	      edge: 'left',
-	      closeOnClick: true 
+	      closeOnClick: true
 	    }
 	  );
 
   });
-  
+
 
 }
 
-
+logoutUser = (e) => {
+    e.preventDefault();
+    Meteor.logout((err) => {
+      if (err){
+        console.log(err.reason);
+      }
+      else {
+        FlowRouter.go('/')
+      }
+    }
+    )
+  }
 
 
 	render(){
@@ -50,7 +61,7 @@ componentDidMount(){
 			    <li><a href='/contact' class="waves-effect">Contact</a></li>
 			    <li><div class="divider"></div></li>
 			    <li><a href='/profile' class="waves-effect waves-light">Profile</a></li>
-			    <li><a class="subheader waves-effect" href="#">Logout</a></li>
+          <li><a href='/' onClick={e =>this.logoutUser(e)} class="waves-effect waves-light">Logout</a></li>
 			  </ul>
 
 			  <a data-activates="slide-out" class="sidenav-trigger light-blue lighten-2" href="#!">
@@ -67,4 +78,3 @@ componentDidMount(){
 
 
 export default Navbar
-

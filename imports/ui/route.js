@@ -9,6 +9,24 @@ import Profile from './Profile.js';
 import Search from './Search.js';
 import Add from './Add.js';
 
+
+let open;
+open = FlowRouter.group({});
+closed = FlowRouter.group({
+  triggersEnter:[
+    function(){
+      if(!(Meteor.loggingIn() || Meteor.userId())) {
+        return FlowRouter.go("/signup");
+      }
+       else  {
+        return FlowRouter.go("/")
+      }
+    }
+  ]
+})
+
+
+
 FlowRouter.route('/',{
 	name: 'Home',
 	action: ()=>{

@@ -1,28 +1,87 @@
 import React, {Component } from 'react';
 import ReactDOM from 'react-dom';
 import Footer from './Footer.js';
+import Property from '../api/collections/collections.js';
+import PropTypes from 'prop-types';
+import { withTracker } from 'meteor/react-meteor-data';
 
 class Home extends Component {
-	componentDidMount(){
-  		var element = ReactDOM.findDOMNode(this.refs.dropdown)
 
-		  $(element).ready(function() {
-		    $('select').material_select();
-		  });
 
-			$(document).ready(function(){
-	 $('.carousel.carousel-slider').carousel({
-		 fullWidth:true
-	 });
+		
+componentDidMount(){
+  var element = ReactDOM.findDOMNode(this.refs.dropdown)
+
+  $(element).ready(function() {
+  $('select').material_select();
+  	});
+		$('.carousel.carousel-slider').carousel({
+			fullWidth: true,
+			indicators: true
+		});
+
+	$(document).ready(function(){
+	 $('#demo-carousel-content').carousel();
 	  setInterval(function() {
 	    $('.carousel.carousel-slider').carousel('next');
 	  }, 6000);
 
 	});
-	}
+	
+}
+
+displayUser=()=>{
+      const blog = this.props.blog;
+      return blog.map((blog) => {
+        return (
+          <div key = {blog._id}>
+	<div id="basic-card" class="section container">
+                  
+                  <div class="row">
+                    
+                    <div class="col s12">
+                      <div class="row">
+                        <div class="col s12">
+                          <div class="card horizontal">
+
+                            <div class="card-image width-65">
+                              <img src="images/house.jpeg"/>
+                            </div>
+
+                            <div class="card-stacked">
+                              <div class="card-content">
+				<h4 class="header" id ='blue'>{blog.title}</h4>
+                                <h5 id ='bold'>K{blog.price}</h5>
+				<p id ='bold'>{blog.bed} Bedroom(s) {blog.bath} Bathroom(s) {blog.type} for 
+				sale in {blog.location}</p>
+                                <p>{blog.description}
+                                </p>
+                                <p> Posted on: {blog.createdAt.toString()}
+                                </p>
+                              </div>
+                              <div class="card-action border-none">
+                                <a class="waves-effect waves-light btn box-shadow light-blue lighten-1">Contact Owner</a>
+                              </div>
+                            </div>
+
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                  </div>
+
+                </div>
+	</div>
+        )
+      }
+    )
+    };
+
+
 
 	render(){
-	return (
+		return (
 		<div>
 		
 		<div class="carousel carousel-slider center">
@@ -112,7 +171,7 @@ Our App smartly locates properties that lie within your preferred locality and b
 						<option value="3">Three Bedrooms</option>
 						<option value="4">Four Bedrooms</option>
 					</select>
-					<label>Bedrooms</label>
+					<label>Bedrooms</label> 
 							</div>
 						</div>
 					<div className="row">
@@ -196,7 +255,21 @@ Our App smartly locates properties that lie within your preferred locality and b
 							 call in for viewing arrangements.</p><p>posted:15 min ago</p>
 							</div>
 					</div>
+					<div className="row">
+							<div className="col s4">
+							
+								<img src="images/house.jpeg"/>
+							</div>
+						   <div className="col s8">
+							<h1>ZMW 1 000 000</h1>
+							<h3>3 Bedroom House for sale in Foxdale</h3>
+							<p>Property is located on Zambezi road in a housing estate. The house
+							 in very good condition and has sitting tenants. Price is negotiable,
+							 call in for viewing arrangements.</p><p>posted:15 min ago</p>
+							</div>
+					</div>
 				 </div>
+		{this.displayUser()}
 		<Footer/>
 		</div>
 
@@ -204,4 +277,16 @@ Our App smartly locates properties that lie within your preferred locality and b
 	}
 }
 
-export default Home
+Home.propTypes = {
+  blog: PropTypes.array.isRequired,
+};
+
+export default withTracker(()=> {
+  Meteor.subscribe('blog');
+
+  return {
+    blog: Property.find({}).fetch(),
+  };
+}) (Home);
+
+

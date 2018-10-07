@@ -1,9 +1,9 @@
 import  { Meteor } from 'meteor/meteor';
-import Blog from '../collections/collections.js';
+import Property from '../collections/collections.js';
 
 Meteor.methods({
-	'newBlog': (blog)=> {
-		Blog.insert(blog)
+	'addProperty': (blog)=> {
+		Property.insert(blog)
 }
 
 

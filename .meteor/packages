@@ -25,3 +25,9 @@ static-html
 materialize:materialize
 accounts-base
 meteortoys:allthings
+react-meteor-data
+cfs:standard-packages
+ostrio:files
+momentjs:moment
+matb33:collection-hooks
+zimme:collection-timestampable

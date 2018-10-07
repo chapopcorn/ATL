@@ -7,6 +7,7 @@ import Login from './accounts/Login.js';
 import Notfound from './Notfound.js';
 import Profile from './Profile.js';
 import Search from './Search.js';
+import Add from './Add.js';
 
 
 let open;
@@ -73,6 +74,13 @@ FlowRouter.route('/search',{
 	name: 'Search',
 	action: ()=>{
 		mount(Search, {})
+	}
+});
+
+FlowRouter.route('/addproperty',{
+	name: 'Add',
+	action: ()=>{
+		mount(Add, {})
 	}
 });
 

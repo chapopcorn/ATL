@@ -51,7 +51,7 @@ deleteAcc(){
 		return(
 
 			<div>
-				<div class="navbar-fixed">
+				
 			<nav class="light-blue lighten-2 nav-wrapper">
 
 			  <a href="/" class="brand-logo center" id='nav-content'>
@@ -77,7 +77,6 @@ deleteAcc(){
 			    <i class="material-icons">menu</i>
 			  </a>
 			</nav>
-			</div>
 			</div>
 
 

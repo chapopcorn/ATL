@@ -17,6 +17,13 @@ font-size: 30px;
    background-size: cover;
 }
 
+.add-pic {
+   background-image: url("images/mediterranean.jpg");
+   height: 100vh;
+   background-size: cover; 
+}
+
+
 #row-1{
 margin-top: 0;
 padding: 20%;
@@ -35,6 +42,10 @@ background-image: url("images/apartment.jpg");
 
 #row-3{
 padding: 10px;
+}
+
+#bold{
+font-weight:bold;
 }
 
 #contact{

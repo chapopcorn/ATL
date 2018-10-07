@@ -9,7 +9,7 @@ class Profile extends Component {
 componentDidMount() {
 
 $(document).ready(function(){
-    $('.tabs').tabs();
+    $('.tabs').tabs(); 
   });
 
 }
@@ -40,8 +40,8 @@ $(document).ready(function(){
 						type="submit" name="action">Settings
 					    <i class="material-icons right">settings</i>
 					  </button>
-					 <button class="btn waves-effect waves-light light-blue lighten-1" type="submit" name="action">Add Property
-					    <i class="material-icons right">home</i>
+					 <button class="btn waves-effect waves-light light-blue lighten-1" type="submit" name="action" ><a href='/'>Add Property
+					    </a><i class="material-icons right">home</i>
 					  </button>
 
 				  </div>

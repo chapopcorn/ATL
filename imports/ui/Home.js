@@ -11,9 +11,11 @@ class Home extends Component {
 		  });
 
 			$(document).ready(function(){
-	 $('#demo-carousel-content').carousel();
+	 $('.carousel.carousel-slider').carousel({
+		 fullWidth:true
+	 });
 	  setInterval(function() {
-	    $('#demo-carousel-content').carousel('next');
+	    $('.carousel.carousel-slider').carousel('next');
 	  }, 6000);
 
 	});
@@ -22,26 +24,52 @@ class Home extends Component {
 	render(){
 	return (
 		<div>
-		<div className="container">
-		<div className="carousel carousel-slider" id="demo-carousel-content" data-indicators="true" >
+		
+		<div class="carousel carousel-slider center">
+    <div class="carousel-fixed-item center">
+      
+    </div>
+    <div class="carousel-item  white-text" id="carousrlimage" href="#one!">
+	<div id="divindiv">
+      <h1>ALT </h1>
+      <p class="white-text">ALT (Apartment Locator) is a property app that allows users to advertise
+ available land and homes for rent or sell (agent free), at the same time
+  it also allows user to look for land and homes as well.</p>
+  </div> 
+    </div>
+    <div class="carousel-item white-text" id="carousrlimage1" href="#two!">
+	<div id="divindiv">
+      <h1>1. Problem Statement</h1>
+      <p class="white-text">-Createing and effective search component that filters the user's requirements.
+-Having two type of profiles for buyers and sellers
+-A show/hide password component when siging up.
+-Having a minimum of 20 listings on the website when it launches
+-Custome dashboard for each user depending on their requirements</p>
+</div>
+    </div>
+    <div class="carousel-item  white-text"  id="carousrlimage2" href="#three!">
+	<div id="divindiv">
+      <h1>2. Goal to solve problem</h1>
+      <p class="white-text">-Users can state, when sigining up, if they are a buyer or seller, as well as their search requirements eg. price range, province, area, home size etc.
+-Collect data from Facebook and other such platforms to pre eneter into the database.
+-Research 
+-Alert users to porperties that fit their requirements in their dashboard.</p>
+</div>
+    </div>
+    <div class="carousel-item  "  id="carousrlimage3" href="#four!">
+	<div id="divindiv">
+      <h1>4. Features</h1>
+	  <h3>Intelligent Filters</h3>
+      <p class="white-text">A filter that to narrows the user’s search down and ensure their relevance.
 
-	  <a className="carousel-item" href="#one!"><img src="images/royal-livingstone-resort-exterior.jpg"/></a>
+Connection Between Users
+Contact the seller/buyer with just a tap. Call or message the advertisers instantly. 
 
-
-	   <div className="carousel-fixed-item center">
-		 	<img src="images/logo.png" className="circle responsive-img"/>
-	     <h2 id="blue">ATL</h2>
-	      <p id="blue">Apartment Locator</p>
-	      <button  href="/about" className="btn waves-effect waves-light light-blue lighten-1" type="submit" name="action">M o r e i n f o r</button>
-	    </div>
-
-	    <a className="carousel-item" href="#two!"><img src="images/Windhoek-City-Views.jpg"/>
-	      </a>
-	   <a className="carousel-item" href="#two!"><img src="/home/alvin2/ATL/public/images/outside.jpg"/>
-	      </a>
-
-	  </div>
-		</div>
+Smart Integration
+Our App smartly locates properties that lie within your preferred locality and budget.</p>
+</div>
+    </div>
+  </div>
 
 		<div className='container'>
 			<div className='row'>

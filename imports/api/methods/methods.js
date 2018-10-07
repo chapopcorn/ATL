@@ -17,3 +17,11 @@ Meteor.methods({
 }
 
 })
+
+Meteor.methods({
+
+    'deleteUserAccount':(id)=> Meteor.users.remove(id)
+
+    
+
+});

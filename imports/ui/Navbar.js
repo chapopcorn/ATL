@@ -38,12 +38,20 @@ logoutUser = (e) => {
     )
   }
 
+deleteAcc(){
+    const userId= this._id;
+    Meteor.call('deleteUserAcount',{_id:userId});
+    FlowRouter.go('/');
+  }
+
+
 
 	render(){
 
 		return(
 
 			<div>
+				<div class="navbar-fixed">
 			<nav class="light-blue lighten-2 nav-wrapper">
 
 			  <a href="/" class="brand-logo center" id='nav-content'>
@@ -61,13 +69,15 @@ logoutUser = (e) => {
 			    <li><a href='/contact' class="waves-effect">Contact</a></li>
 			    <li><div class="divider"></div></li>
 			    <li><a href='/profile' class="waves-effect waves-light">Profile</a></li>
-          <li><a href='/' onClick={e =>this.logoutUser(e)} class="waves-effect waves-light">Logout</a></li>
+                            <li><a href='/' onClick={e =>this.logoutUser(e)} class="waves-effect waves-light">Logout</a></li>
+			    <li><a href="#"  onClick={this.deleteAcc()}>Delete Account</a></li>
 			  </ul>
 
 			  <a data-activates="slide-out" class="sidenav-trigger light-blue lighten-2" href="#!">
 			    <i class="material-icons">menu</i>
 			  </a>
 			</nav>
+			</div>
 			</div>
 
 

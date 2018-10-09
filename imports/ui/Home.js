@@ -255,8 +255,10 @@ export default withTracker(()=> {
   Meteor.subscribe('blog');
 
   return {
-    blog: Property.find({}).fetch(),
+    blog: Property.find({}, {sort: {createdAt: -1}}).fetch(),
   };
 }) (Home);
+
+
 
 

@@ -1,4 +1,5 @@
 import React, {Component } from 'react';
+import ReactDOM from 'react-dom';
 import Image from 'react-image-resizer';
 import Footer from './Footer.js';
 import { Session } from 'meteor/session';
@@ -13,9 +14,18 @@ import FileUploadComponent from './Images.js';
 
 class Add extends Component {
 
+componentDidMount(){
+  var element = ReactDOM.findDOMNode(this.refs.dropdown)
+
+  $(element).ready(function() {
+  $('select').material_select();
+  	});
+	
+}
+
 constructor(props){
      super(props);
-      this.state = {title : "", location : "", type: "", bed: 0, bath: 0,  price: 0, description: ""}
+      this.state = {title : "", location : "", type: '', bed: 0, bath: 0,  price: 0, description: "", forsale: ''}
 
 }
 
@@ -31,10 +41,12 @@ handleLoc = (e) => {
 		})
 	}
 handleType = (e) => {
-		this.setState({
-			type: e.target.value
-		})
+
+        this.setState({
+            type: e.target.value
+})
 	}
+
 handleBed = (e) => {
 		
 		this.setState({
@@ -67,9 +79,18 @@ handleDescription = (e) => {
           //});
 
 
+
+handleForSale = (e) => {
+
+        this.setState({
+            forsale: e.target.value
+        })
+	}
+
+
 createProp =(e)=>{
 	e.preventDefault();
-	
+	const currentUserId = Meteor.userId();
 	const title = this.state.title;
 	const location = this.state.location;
 	const description = this.state.description;
@@ -77,10 +98,11 @@ createProp =(e)=>{
 	const bath = this.state.bath;
 	const price = this.state.price;
 	const type = this.state.type;
+	const forsale = this.state.forsale;
 	
 
 	const user = {
-	title, location, type, description, bath, bed, price
+	title, location, type, description, bath, bed, price, forsale
 	}
 	Meteor.call('addProperty', user)
 
@@ -89,61 +111,61 @@ createProp =(e)=>{
 	
 }
 
-displayUser=()=>{
-      const blog = this.props.blog;
-      return blog.map((blog) => {
-        return (
-          <div key = {blog._id}>
+	displayUser=()=>{
+	      const blog = this.props.blog;
+	      return blog.map((blog) => {
+		return (
+		  <div key = {blog._id}>
 
 
-<div id="basic-card" class="section">
-                  
-                  <div class="row">
-                    
-                    <div class="col s12">
-                      <div class="row">
-                        <div class="col s12">
-                          <div class="card horizontal">
-                            <div class="card-image width-65">
-                              <img src="images/house.jpeg"/>
-                            </div>
-                            <div class="card-stacked">
-                              <div class="card-content">
-				<h4 class="header" id ='blue'>{blog.title}</h4>
-                                <h5 id ='bold'>K{blog.price}</h5>
-				<p id ='bold'>{blog.bed} Bedroom(s) {blog.bath} Bathroom(s) {blog.type} for 
-				sale in {blog.location}</p>
-                                <p>{blog.description}
-                                </p>
-                                <p> Posted on:{blog.createdAt.toString()}
-                                </p>
-                              </div>
-                              <div class="card-action border-none">
-                                <a class="waves-effect waves-light btn box-shadow light-blue lighten-1">Contact Owner</a>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-          </div>
-        )
-      }
-    )
-    }
+	<div id="basic-card" class="section">
+		          
+		          <div class="row">
+		            
+		            <div class="col s12">
+		              <div class="row">
+		                <div class="col s12">
+		                  <div class="card horizontal">
+		                    <div class="card-image width-65">
+		                      <img src="images/house.jpeg"/>
+		                    </div>
+		                    <div class="card-stacked">
+		                      <div class="card-content">
+					<h4 class="header" id ='blue'>{blog.title}</h4>
+		                        <h5 id ='bold'>K{blog.price}</h5>
+					<p id ='bold'>{blog.bed} Bedroom(s) {blog.bath} Bathroom(s) {blog.type} for 
+					{blog.forsale} in {blog.location}</p>
+		                        <p>{blog.description}
+		                        </p>
+		                        <p> Posted on:{blog.createdAt.toString()}
+		                        </p>
+		                        <p> Posted By:{blog.createdBy.toString()}
+		                        </p>
+		                      </div>
+		                      <div class="card-action border-none">
+		                        <a class="waves-effect waves-light btn box-shadow light-blue lighten-1">Contact Owner</a>
+		                      </div>
+		                    </div>
+		                  </div>
+		                </div>
+		              </div>
+		            </div>
+		          </div>
+		        </div>
+		  </div>
+		)
+	      }
+	    )
+	    }
 
 	render(){
 		return (
             <div class = "add-pic">
   				 
       
-            <div class="row">
-                     
-                     <div id='contact' class="col s10 offset-s1 white">
-
-                   <h2 class="flow-text" id='center'align="center">Add Property</h2>
+            <div class="row">  
+                <div id='contact' class="col s10 offset-s1 white">
+                <h2 class="flow-text" id='center'align="center">Add Property</h2>
 		<form class="col s12" onSubmit={this.createProp}>
                    <div class="row">
                        <div class="input-field col s6">
@@ -151,25 +173,41 @@ displayUser=()=>{
                          <input id="icon_prefix" type="text" class="validate" name='title' onChange={this.handleTitle}/>
                          <label for="icon_prefix">Title</label>
                        </div>
-                       <div class="input-field col s6">
-                       <i class="material-icons prefix">home</i>
-                         <input id="icon_prefix" type="text" class="validate" name='type' onChange={this.handleType}/>
-                         <label for="icon_prefix">Type</label>
-                       </div>
+			  <div class="input-field col s6">
+			    <i class="material-icons prefix">home</i>
+			    <select multiple id="icon_prefix3" name='type' onChange={this.handleType}>
+			      <option disabled selected>Type of Property</option>
+			      <option value="house">House</option>
+			      <option value="apartment">Apartment</option>
+			      <option value="flat">Flat</option>
+			      <option value="land">Land</option>
+			    </select>
+			    <label for="icon_prefix3"></label>
+			  </div>
                    </div>
+
                    <div class="row">
-                       <div class="input-field col s6">
+                       <div class="input-field col s4">
                        <i class="material-icons prefix">location_on</i>
                          <input id="icon_prefix" type="text" class="validate" name='location' onChange={this.handleLoc}/>
                          <label for="icon_prefix">Location</label>
                        </div>
-		    <div class="file-field input-field col s6">
+		    <div class="file-field input-field col s4">
+
+			    <i class="material-icons prefix">home</i>
+			    <select multiple id="icon_prefix3" name='forsale' onChange={this.handleForSale}>
+			      <option disabled selected>For Rent or Sale</option>
+			      <option value="Sale">Sale</option>
+			      <option value="Rent">Rent</option>
+			    </select>
+			    <label for="icon_prefix3"></label>
+			  
+		    </div>
+
+		    <div class="file-field input-field col s4">
 		      <div class="btn waves-effect waves-light light-blue lighten-1">
 			<span>Image</span>
 			<input type="file" name='image'/>
-		      </div>
-		      <div class="file-path-wrapper">
-			<input class="file-path validate" type="text"/>
 		      </div>
 		    </div>
                        
@@ -192,6 +230,12 @@ displayUser=()=>{
                          <label for="icon_email">Price</label>
                        </div>
                    </div>
+
+  
+
+
+
+
                    <div class="row">
                        <div class="input-field col s12">
                         <i class="material-icons prefix">mode_edit</i>
@@ -234,6 +278,6 @@ displayUser=()=>{
 export default withTracker(() =>{
     Meteor.subscribe('blog');
     return{
-      blog : Property.find({}).fetch(),
+      blog : Property.find({}, {sort: {createdAt: -1}}).fetch(),
     }
   })(Add);

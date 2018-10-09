@@ -4,7 +4,7 @@ import Property from '../collections/collections.js';
 
 
 Meteor.publish('blog', ()=>{
-	return Property.find({}, {sort: {createdAt: -1}, limit: 100});
+	return Property.find();
 });
 
 

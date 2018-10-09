@@ -2,10 +2,9 @@ import { withTracker } from 'meteor/react-meteor-data';
 import { Meteor } from 'meteor/meteor';
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import UserFiles from '../startup/client/index.js'
-//import IndividualFile from './ShowImages.js';
+import Images from '../api/collections/collections.js';
 
-class FileUploadComponent extends Component {
+class ImageUpload extends Component {
 
 constructor(props){
      super(props);
@@ -13,10 +12,10 @@ constructor(props){
 
 }
 
-uploadIt(e) {
+uploadIt = (e) => {
     e.preventDefault();
 
-    //let self = this;
+    let self = this;
 
     if (e.currentTarget.files && e.currentTarget.files[0]) {
 
@@ -26,7 +25,7 @@ uploadIt(e) {
         let uploadInstance = UserFiles.insert({
           file: file,
           meta: {
-            locator: this.props.fileLocator,
+            locator: tself.props.fileLocator,
             userId: Meteor.userId()
           },
           streams: 'dynamic',
@@ -44,6 +43,10 @@ uploadIt(e) {
     }
   }
 
+
+imageFiles = (e) => {
+    return Images.find();
+}
 
 	
 
@@ -67,9 +70,8 @@ uploadIt(e) {
 
         <div className="row">
           <div className="col s6">
-
-            <img src={this.state.file}/>
-
+		<p>Image below:</p>
+ 		<img src={self.link} alt={self.name}/>
           </div>
         </div>
 
@@ -79,13 +81,4 @@ uploadIt(e) {
 	}
 };
 
-export default withTracker( ( props ) => {
-  const filesHandle = Meteor.subscribe('files.all');
-  const docsReadyYet = filesHandle.ready();
-  const files = UserFiles.find({}, {sort: {name: 1}}).fetch();
-
-  return {
-    docsReadyYet,
-    files,
-  };
-})(FileUploadComponent);
+export default ImageUpload

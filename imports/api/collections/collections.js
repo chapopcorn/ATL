@@ -12,10 +12,16 @@ Property.attachBehaviour('timestampable');
 
 Property.attachBehaviour('timestampable', {
   createdAt: 'insertedAt',
-  createdBy: false,
+  createdBy: 'insertedBy',
   updatedAt: 'modifiedAt',
   updatedBy: false
 });
+
+
+
+export const Images = new FilesCollection({collectionName: 'images',
+});
+
 
 //collection.find({}, {"sort" : ['datefield', 'asc']} ).toArray(function(err,docs) {});
 

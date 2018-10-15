@@ -38,6 +38,13 @@ logoutUser = (e) => {
     )
   }
 
+deleteAcc(){
+    const userId= this._id;
+    Meteor.call('deleteUserAcount',{_id:userId});
+    FlowRouter.go('/');
+  }
+
+
 
 	render(){
 
@@ -45,7 +52,9 @@ logoutUser = (e) => {
 
 			<div>
 				
+
 			<nav className="light-blue lighten-2 nav-wrapper">
+
 
 			  <a href="/" className="brand-logo center" id='nav-content'>
 				<img src="images/logo.png" className="circle responsive-img"
@@ -56,16 +65,17 @@ logoutUser = (e) => {
 				<li><a href="/signup">Signup</a></li>
       			  </ul>
 
-			  <ul className="side-nav" id='slide-out'>
-			    <li><a href="/" className="waves-effect">Home</a></li>
-			    <li><a href='/about' className="waves-effect">About</a></li>
-			    <li><a href='/contact' className="waves-effect">Contact</a></li>
-			    <li><a href='/addproperty' className="waves-effect">Add property</a></li>
-			    <li><a href='/search' className="waves-effect">Search</a></li>
-			    <li><div className="divider"></div></li>
-			    <li><a href='/profile' className="waves-effect waves-light">Profile</a></li>
-                            <li><a href='/' onClick={e =>this.logoutUser(e)} className="waves-effect waves-light">Logout</a></li>
-			    <li><a href="#">Delete Account</a></li>
+			  <ul class="side-nav" id='slide-out'>
+			    <li><a href="/" class="waves-effect">Home</a></li>
+			    <li><a href='/about' class="waves-effect">About</a></li>
+			    <li><a href='/contact' class="waves-effect">Contact</a></li>
+			    <li><a href='/search' class="waves-effect">Search</a></li>
+			    <li><div class="divider"></div></li>
+			    <li><a href='/profile' class="waves-effect waves-light">Profile</a></li>
+			    <li><a href='/addproperty' class="waves-effect">Add property</a></li>
+                            <li><a href='/' onClick={e =>this.logoutUser(e)} class="waves-effect waves-light">Logout</a></li>
+			    <li><a href="#"  onClick={this.deleteAcc()}>Delete Account</a></li>
+
 			  </ul>
 
 			  <a data-activates="slide-out" className="sidenav-trigger light-blue lighten-2" href="#!">

@@ -113,6 +113,7 @@ displayUser=()=>{
 	</p>
 </div>
     </div>
+
     <div className="carousel-item  white-text"  id="carousrlimage2" href="#three!">
 	<div id="divindiv"> 
       <h1>The Solution</h1>
@@ -125,6 +126,7 @@ displayUser=()=>{
 	</p>
 </div>
     </div>
+
     <div className="carousel-item  "  id="carousrlimage3" href="#four!">
 	<div id="divindiv">
       <h1> Our Features</h1>
@@ -140,7 +142,7 @@ displayUser=()=>{
 		Smart Integration
 		Our App smartly locates properties that lie within your preferred locality and budget.
 	</p>
-</div>
+    </div>
     </div>
   </div>
 
@@ -158,12 +160,14 @@ displayUser=()=>{
 					     
 						 
 						</div>
+
 						<div class="row">
 							<div class="col s12">
 							<button class="btn waves-effect waves-light light-blue lighten-1" type="submit" name="action">Search
 					    <i class="material-icons right">search</i>
 					  </button>
 							</div>	
+
 						</div>	
 					  </form>
 					
@@ -176,8 +180,9 @@ displayUser=()=>{
 		<Footer/>
 		</div>
 
-	)
+		);
 	}
+
 }
 
 Home.propTypes = {

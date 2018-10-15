@@ -12,6 +12,7 @@ Meteor.methods({
 
 
  
+
 //Meteor.methods({
 	//'removeBlog': (blog)=> {
 		///Blog.remove(_id)
@@ -26,3 +27,19 @@ Meteor.methods({
     
 
 //});
+
+Meteor.methods({
+	'removeBlog': (blog)=> {
+		Blog.remove(_id)
+}
+
+})
+
+Meteor.methods({
+
+    'deleteUserAccount':(id)=> Meteor.users.remove(id)
+
+    
+
+});
+

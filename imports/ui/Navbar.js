@@ -44,28 +44,32 @@ logoutUser = (e) => {
 		return(
 
 			<div>
-			<nav class="light-blue lighten-2 nav-wrapper">
+				
+			<nav className="light-blue lighten-2 nav-wrapper">
 
-			  <a href="/" class="brand-logo center" id='nav-content'>
+			  <a href="/" className="brand-logo center" id='nav-content'>
 				<img src="images/logo.png" className="circle responsive-img"
 			  	id='nav-pic'width="42" height="42"/>
 			  </a>
-			  <ul id="nav-mobile" class="right hide-on-med-and-down">
+			  <ul id="nav-mobile" className="right hide-on-med-and-down">
 				<li><a href="/login">Login</a></li>
 				<li><a href="/signup">Signup</a></li>
       			  </ul>
 
-			  <ul class="side-nav" id='slide-out'>
-			    <li><a href="/" class="waves-effect">Home</a></li>
-			    <li><a href='/about' class="waves-effect">About</a></li>
-			    <li><a href='/contact' class="waves-effect">Contact</a></li>
-			    <li><div class="divider"></div></li>
-			    <li><a href='/profile' class="waves-effect waves-light">Profile</a></li>
-          <li><a href='/' onClick={e =>this.logoutUser(e)} class="waves-effect waves-light">Logout</a></li>
+			  <ul className="side-nav" id='slide-out'>
+			    <li><a href="/" className="waves-effect">Home</a></li>
+			    <li><a href='/about' className="waves-effect">About</a></li>
+			    <li><a href='/contact' className="waves-effect">Contact</a></li>
+			    <li><a href='/addproperty' className="waves-effect">Add property</a></li>
+			    <li><a href='/search' className="waves-effect">Search</a></li>
+			    <li><div className="divider"></div></li>
+			    <li><a href='/profile' className="waves-effect waves-light">Profile</a></li>
+                            <li><a href='/' onClick={e =>this.logoutUser(e)} className="waves-effect waves-light">Logout</a></li>
+			    <li><a href="#">Delete Account</a></li>
 			  </ul>
 
-			  <a data-activates="slide-out" class="sidenav-trigger light-blue lighten-2" href="#!">
-			    <i class="material-icons">menu</i>
+			  <a data-activates="slide-out" className="sidenav-trigger light-blue lighten-2" href="#!">
+			    <i className="material-icons">menu</i>
 			  </a>
 			</nav>
 			</div>

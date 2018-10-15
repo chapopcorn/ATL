@@ -19,9 +19,15 @@ Property.attachBehaviour('timestampable', {
 
 
 
-export const Images = new FilesCollection({collectionName: 'images',
+const Images = new FilesCollection({collectionName: 'images', storagePath: 'uploads/images'
 });
 
+const ProfileImages = new FilesCollection({collectionName: 'profileImages', storagePath: 'uploads/profile'
+});
+
+export {Images};
+
+export {ProfileImages};
 
 //collection.find({}, {"sort" : ['datefield', 'asc']} ).toArray(function(err,docs) {});
 

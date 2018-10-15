@@ -8,6 +8,7 @@ import Notfound from './Notfound.js';
 import Profile from './Profile.js';
 import Search from './Search.js';
 import Add from './Add.js';
+import Stepper from './Stepper.js';
 
 
 let open;
@@ -81,6 +82,13 @@ FlowRouter.route('/addproperty',{
 	name: 'Add',
 	action: ()=>{
 		mount(Add, {})
+	}
+});
+
+FlowRouter.route('/stepper',{
+	name: 'Stepper',
+	action: ()=>{
+		mount(Stepper, {})
 	}
 });
 

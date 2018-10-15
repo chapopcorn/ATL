@@ -8,47 +8,51 @@ class ImageUpload extends Component {
 
 constructor(props){
      super(props);
-      this.state = {file : null}
+      this.state = {imagesFile : null}
 
 }
 
+handleImages = (e) => {
+		
+		this.setState({
+			imagesFile: e.target.files[0]
+		})
+	}
+
 uploadIt = (e) => {
     e.preventDefault();
+   const { imagesFile } = this.state;
 
-    let self = this;
+    //let self = this;
 
-    if (e.currentTarget.files && e.currentTarget.files[0]) {
+  //  if (e.imagesFile.files && e.imagesFile.files[0]) {
 
-      var file = e.currentTarget.files[0];
+    //  var file = e.imagesFile.files[0];
 
-      if (file) {
-        let uploadInstance = UserFiles.insert({
-          file: file,
+      if (imagesFile) {
+        let uploadInstance = Images.insert({
+          file: imagesFile,
           meta: {
-            locator: tself.props.fileLocator,
             userId: Meteor.userId()
           },
           streams: 'dynamic',
           chunkSize: 'dynamic',
           allowWebWorkers: true
-        }, false)
+        }, true);
  
 
         uploadInstance.on('error', function (error, fileObj) {
           console.log('Error during upload: ' + error)
         });
+ 	uploadInstance.on('start', function ( fileObj) {
+          console.log('startinnnnng during upload: ' + fileObj)
+        });
 
-        uploadInstance.start(); 
-      }
+       // uploadInstance.start(); 
+      //}
     }
   }
 
-
-imageFiles = (e) => {
-    return Images.find();
-}
-
-	
 
 
 
@@ -57,21 +61,30 @@ imageFiles = (e) => {
 	<div>
 
         <div className="row">
-          <div className="file-field input-field col s6">
+          <div className="col s6">
             	<p>Upload New File:</p>
-
-	   	 <div class="btn waves-effect waves-light light-blue lighten-1">
-			<span>Image</span>
-               		<input type="file" id="fileinput" ref="fileinput" name='file' onChange={this.uploadIt}/>
+			<form onSubmit={this.uploadIt}>
+			  	<div className="file-field input-field">
+		      			<div className="btn waves-effect waves-light light-blue lighten-1">
+						<span>Image</span>
+               					<input type="file" id="fileinput" ref="fileinput" name='imagesFile' 
+						onChange={this.handleImages}/>
+		      			</div>
+				</div>
+                 		<button class="btn waves-effect waves-light light-blue lighten-1 right" 
+               				type="submit" name="action">
+					Add
+                       			<i class="material-icons right">add</i>
+               			</button>
+			</form>
+                         </div>
           	</div>
 
-          </div>
-        </div>
 
         <div className="row">
           <div className="col s6">
 		<p>Image below:</p>
- 		<img src={self.link} alt={self.name}/>
+ 		//<img src={self.link} alt={self.name}/>
           </div>
         </div>
 

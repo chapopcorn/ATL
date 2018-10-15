@@ -1,8 +1,11 @@
 import React, {Component } from 'react';
 import Image from 'react-image-resizer';
 import Footer from './Footer.js';
-
-
+import Property from '../api/collections/collections.js';
+import PropTypes from 'prop-types';
+import { withTracker } from 'meteor/react-meteor-data';
+import { Images } from '../api/collections/collections.js';
+import {ProfileImages} from '../api/collections/collections.js';
 
 class Profile extends Component {
 
@@ -14,6 +17,104 @@ $(document).ready(function(){
 
 }
 
+displayUser=()=>{
+      const blog = this.props.blog;
+      return blog.map((blog) => {
+      const link = Images.findOne({'meta.key':blog.title}).link();
+        return (
+          <div key = {blog._id}>
+	<div id="basic-card" class="section container">
+                  
+                  <div class="row">
+                    
+                    <div class="col s12">
+                      <div class="row">
+                        <div class="col s12">
+                          <div class="card horizontal">
+
+                            <div class="card-image width-65">
+                              <img src={link} alt={blog.title} width={400} height={400}/>
+                            </div>
+
+                            <div class="card-stacked">
+                              <div class="card-content">
+				<h4 class="header" id ='blue'>{blog.title}</h4>
+                                <h5 id ='bold'>K{blog.price}</h5>
+				<p id ='bold'>{blog.bed} Bedroom(s) {blog.bath} Bathroom(s) {blog.type} for 
+				sale in {blog.location}</p>
+                                <p>{blog.description}
+                                </p>
+                                <p> Posted on: {blog.createdAt.toString()}
+                                </p>
+                              </div>
+                              <div class="card-action border-none">
+                                <a class="waves-effect waves-light btn box-shadow light-blue lighten-1">Contact Owner</a>
+                              </div>
+                            </div>
+
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                  </div>
+
+                </div>
+	</div>
+        )
+      }
+    )
+    };
+
+
+	username = () => {
+			if (Meteor.user()){
+					const name = Meteor.user().profile.name
+					return(name);
+				}
+			}
+
+	usersurname = () => {
+		if (Meteor.user()){
+				const surname = Meteor.user().profile.surname
+				return(surname);
+			}
+		}
+
+	useremail = () => {
+		if (Meteor.user()){
+				const email = Meteor.user().profile.email
+				return(email);
+			}
+		}
+
+	usernumber = () => {
+		if (Meteor.user()){
+				const number = Meteor.user().profile.number
+				return(number);
+			}
+		}
+	usercity = () => {
+		if (Meteor.user()){
+				const city = Meteor.user().profile.city
+				return(city);
+			}
+		}
+
+	userarea = () => {
+		if (Meteor.user()){
+				const area = Meteor.user().profile.area
+				return(area);
+			}
+		}
+
+	userlink = () => {
+		if (Meteor.user()){
+				const link = ProfileImages.findOne({'meta.key':this.useremail()}).link();
+				return(link);
+			}
+		}
+
 	render(){
 		return (
 		<div>
@@ -24,130 +125,34 @@ $(document).ready(function(){
 		</div>
 		<div class="row">
 			<div class="col s4" id='user-pic'>
-			      <Image src="images/user.png" width={300} height={300} alt=""
+			      <img src={this.userlink()} width={300} height={300} alt=""
 				class="circle responsive-img"/>
 			 </div>
 
 			<div class="col s8">
 				  <div class="section" id='user-info'>
-				    <h5 id='blue'>User Name</h5>
+				    <h5 id='blue'>{this.username()} {this.usersurname()}</h5>
 
-					Buyer | Seller<br/>
-					Lusaka, Zambia<br/>
-					+26 123 456 789<br/>
+					{this.useremail()} | Seller<br/>
+					{this.userarea()}, {this.usercity()}<br/>
+					{this.usernumber()}<br/>
 				    	<br/>
-					 <button class="btn waves-effect waves-light light-blue lighten-1"
-						type="submit" name="action">Settings
-					    <i class="material-icons right">settings</i>
-					  </button>
-					 <button class="btn waves-effect waves-light light-blue lighten-1" type="submit" name="action" ><a href='/'>Add Property
-					    </a><i class="material-icons right">home</i>
-					  </button>
+					<a href='/' className='buttonStyle'>SETTINGS
+						<i class="material-icons right">settings</i>
+					</a>
+					<a href='/addproperty' className='buttonStyle'>ADD PROPERTY
+						<i class="material-icons right">home</i>
+					</a>
 
 				  </div>
 				  <div class="divider"></div>
    			</div>
 				</div>
 
-	<div class='container'>
-		  <div class="row">
-		    <div class="col s12">
-		      <ul class="tabs">
-			<li class="tab col s3"><a class="active" href="#inbox">INBOX
-			<i class="material-icons">message</i>
-			</a></li>
-			<li class="tab col s3"><a href="#properties">MY PROPERTIES
-			<i class="material-icons">home</i>
-			</a></li>
-			<li class="tab col s3"><a href="#test4">SETTINGS
-			<i class="material-icons">settings</i>
-			</a></li>
-		      </ul>
-		    </div>
-    			<div id="inbox" class="col s12">
-			<div class='row'>
-				<div class="col s12">
-				<h2 id='blue'>Inbox</h2>
-				  <div class="section">
-				    <h5>Message 1</h5>
-				    <p>
-					Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-					tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-					quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-				    </p>
-				  </div>
-				  <div class="divider"></div>
-				  <div class="section">
-				    <h5>Message 2</h5>
-				    <p>
-					Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-					tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-					quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-				    </p>
-				  </div>
-				  <div class="divider"></div>
-				  <div class="section">
-				    <h5>Message 3</h5>
-				    <p>
-					Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-					tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-					quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-				    </p>
-				  </div>
-
-				</div>
-		</div>
-	</div>
-	   	 <div id="properties" class="col s12">
-			<h2 id='blue'>My Properties</h2>
-
-			<div class="row">
-				<div class="col s4">
-					<img src="images/house.svg"/>
-				</div>
-
-				<div class="col s8">
-					<h2>Lorem ipsum dolor</h2>
-					<p>
-					Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-					tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-					quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-				    	</p>
-				</div>
+			<div>
+			<h2 id='blue'>Dashboard</h2>	
+				{this.displayUser()}
 			</div>
-			<div class="row">
-				<div class="col s4">
-					<img src="images/house.svg"/>
-				</div>
-
-				<div class="col s8">
-					<h2>Lorem ipsum dolor</h2>
-					<p>
-					Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-					tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-					quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-				    	</p>
-				</div>
-			</div>
-			<div class="row">
-				<div class="col s4">
-					<img src="images/house.svg"/>
-				</div>
-
-				<div class="col s8">
-					<h2>Lorem ipsum dolor</h2>
-					<p>
-					Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-					tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-					quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-				    	</p>
-				</div>
-			</div>
-
-		</div>
-	    <div id="test4" class="col s12"><h2 id='blue'>Settings</h2></div>
-	  </div>
-	</div>
 		<Footer/>
 		</div>
 
@@ -156,4 +161,18 @@ $(document).ready(function(){
 	}
 };
 
-export default Profile
+
+export default withTracker(() =>{
+ Meteor.subscribe('blog');
+
+
+userarea = () => {
+	const area = Meteor.user().profile.area
+	return(area);
+}			
+
+  return{
+	blog: Property.find({location: userarea()}, {sort: {createdAt: -1}}).fetch(),
+  }
+})(Profile);
+

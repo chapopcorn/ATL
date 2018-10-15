@@ -18,7 +18,7 @@ font-size: 30px;
 }
 
 .add-pic {
-   background-image: url("images/mediterranean.jpg");
+   background-image: url("images/eagleview.jpg");
    height: 100vh;
    background-size: cover; 
 }
@@ -96,13 +96,14 @@ color: #4fc3f7;
   padding-bottom: 150px;
 }
 
-.divindiv{
-  padding-top:75px;
-  padding-bottom:75px;
+#divindiv{
+  
+  padding-bottom:99px;
   padding-left: 300px;
   padding-right: 300px;
   background-color: #060606b3;
   color: white;
+  
 }
 
 .Notfoundh1{
@@ -135,11 +136,6 @@ vertical-align: middle;
 margin-right: 50px;
 }
 
-
-.carousel .carousel-item {
-width:600px !important;}
-
-
 .fa {
   padding: 20px;
   font-size: 30px;
@@ -163,3 +159,38 @@ width:600px !important;}
   color: white;
 }
 
+#carousrlimage{
+  background-image: url('images/Windhoek-City-Views.jpg');
+  color: #4fc3f7;
+  padding-bottom: 130px
+}
+
+#carousrlimage1{
+  background-image: url('images/outside.jpg');
+  color: #4fc3f7;
+}
+
+#carousrlimage2{
+  background-image: url('images/GI_exterior02_24_698x390_FitToBoxSmallDimension_Center.jpg');
+  color: #4fc3f7;
+}
+
+#carousrlimage3{
+  background-image: url('images/Lusaka-city.jpg');
+  color: #4fc3f7;
+}
+
+.buttonStyle{
+  background-color: #4fc3f7;
+  border: solid #4fc3f7;
+  padding: 5px;
+  padding-left: 15px;
+  padding-right: 15px;
+  border-radius: 2px;
+  margin-right: 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 15px;
+  color: white;
+}

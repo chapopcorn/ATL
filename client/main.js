@@ -6,15 +6,11 @@ import { render } from 'react-dom';
 import React from 'react';
 import App from '../imports/ui/App.js';
 
-Meteor.startup(()=>{
+Meteor.startup(()=>{ 
 
 render(<App />,document.getElementById('target'));
       
 });
 
-
-
-
- $('select').material_select();
 
 

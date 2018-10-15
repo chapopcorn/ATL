@@ -18,7 +18,7 @@ class Login extends React.Component{
 	      console.log(error.reason);
 	      }
 	      else {
-	        FlowRouter.go('/')
+	        FlowRouter.go('/profile')
 	      }
 	    }
 	  );
@@ -31,16 +31,19 @@ class Login extends React.Component{
 
 			<div className="row">
 					<div className="col s6">
-					<h1 id="blue">ALT</h1>
+					<br/>
+					<br/>
 					<div className="center">
 					<img src="images/logo.png" className="circle responsive-img"/>
-				<h5 id="blue"> with ALT (Apartment Locator) you can login online anywhere anytime on more
+				<h5 id="blue"> With ATL  you can login online anywhere anytime on more
 				than just one device </h5>
 				<img src="images/laptop-tablet-phone-pc.png"/>
 				</div>
+					<br/>
+					<br/>
 					</div>
 					 <div className="col s6">
-					 <h2 className="H4">Login</h2>
+					 <h2 className="H4" id='blue'>Login</h2>
 	 				 <form onSubmit={this.loginUser}>
 	 					 <div className="row">
 	 						 <div className="input-feild s12 l6">
@@ -56,14 +59,16 @@ class Login extends React.Component{
 	 					 </div>
 	 					  <button className="btn waves-effect waves-light light-blue lighten-1" type="submit" name="action">L o g i n</button>
 
-	 					 <p><a href="#">Forgot Password</a> | <a href="/signup">Sign Up</a></p>
+	 					 <p><a href="#">Forgot your password?</a> | <a href="/signup">Dont have an account?</a></p>
 	 					 <hr/>
-	 					 <p> you can also use your preferred social account to access ATL</p>
+	 					 <p> You can also use your preferred social account to access ATL</p>
 	 					 <p>
 	 					 <a href="#" className="fa fa-facebook">facebook</a>
 	 					 <a href="#" className="fa fa-google">Google</a></p>
 	 				 </form>
 					</div>
+					<br/>
+					<br/>
 			</div>
 				 <Footer/>
 			</div>

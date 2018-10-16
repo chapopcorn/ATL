@@ -287,3 +287,29 @@ PropertyIndex = new EasySearch.Index({
 	)}
 })
 
+/////////////////////////////////Profile
+
+			<div class="col s4" id='user-pic'>
+			      <img src={this.userlink()} width={300} height={300} alt=""
+				class="circle responsive-img"/>
+			 </div>
+
+			<div class="col s8">
+				  <div class="section" id='user-info'>
+				    <h5 id='blue'>{this.username()} {this.usersurname()} {this.userid()}</h5>
+
+					{this.useremail()} | Seller<br/>
+					{this.userarea()}, {this.usercity()}<br/>
+					{this.usernumber()}<br/>
+				    	<br/>
+					<a href='/' className='buttonStyle'>SETTINGS
+						<i class="material-icons right">settings</i>
+					</a>
+					<a href='/addproperty' className='buttonStyle'>ADD PROPERTY
+						<i class="material-icons right">home</i>
+					</a>
+
+				  </div>
+				  <div class="divider"></div>
+   			</div>
+

@@ -6,6 +6,7 @@ import PropTypes from 'prop-types';
 import { withTracker } from 'meteor/react-meteor-data';
 import { Images } from '../api/collections/collections.js';
 
+
 class Home extends Component {
 
 
@@ -54,9 +55,8 @@ displayUser=()=>{
                             <div className="card-stacked">
                               <div className="card-content">
 				<h4 className="header" id ='blue'>{blog.title}</h4>
-                                <h5 id ='bold'>K{blog.price}</h5>
-				<p id ='bold'>{blog.bed} Bedroom(s) {blog.bath} Bathroom(s) {blog.type} for 
-				sale in {blog.location}</p>
+                                <h5 id ='bold'>ZMW {blog.price}</h5>
+				<p id ='bold'>{blog.bed} Bedroom(s) {blog.bath} Bathroom(s) {blog.type} for sale in {blog.location}</p>
                                 <p>{blog.description}
                                 </p>
                                 <p> Posted on: {blog.createdAt.toString()}
@@ -153,7 +153,7 @@ displayUser=()=>{
 					  <form class="col s12">
 					    <div class="row">
 					       <div class="input-field col s12">
-						  <i class="material-icons prefix">home</i>
+						  <i class="material-icons prefix">location_on</i>
 						  <input id="icon_prefix" type="text" class="validate" name='searchtext' onChange={this.handleSearch}/>
 						  <label for="icon_prefix">Search by Location</label>
 						</div>

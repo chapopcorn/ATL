@@ -6,6 +6,8 @@ import PropTypes from 'prop-types';
 import { withTracker } from 'meteor/react-meteor-data';
 import { Images } from '../api/collections/collections.js';
 import {ProfileImages} from '../api/collections/collections.js';
+import Dashboard from './accounts/dashboard.js';
+import Myproperty from './accounts/myproperty.js';
 
 class Profile extends Component {
 
@@ -108,6 +110,13 @@ displayUser=()=>{
 			}
 		}
 
+	userid = () => {
+		if (Meteor.user()){
+				const myid = Meteor.user()._id
+				return(myid);
+			}
+		}
+
 	userlink = () => {
 		if (Meteor.user()){
 				const link = ProfileImages.findOne({'meta.key':this.useremail()}).link();
@@ -115,44 +124,58 @@ displayUser=()=>{
 			}
 		}
 
+		logoutUser = (e) => {
+		    e.preventDefault();
+		    Meteor.logout((err) => {
+		      if (err){
+			console.log(err.reason);
+		      }
+		      else {
+			FlowRouter.go('/')
+		      }
+		    }
+		    )
+		  }
+
 	render(){
 		return (
 		<div>
+
 		<div class='row'>
-				<div class="col s12">
+			<div class="col s5">
+              			<div class="card-panel">
+                			<div class="row">
 
-				</div>
-		</div>
-		<div class="row">
-			<div class="col s4" id='user-pic'>
-			      <img src={this.userlink()} width={300} height={300} alt=""
+			<img src={this.userlink()} width={300} height={300} alt=""
 				class="circle responsive-img"/>
-			 </div>
+			<br/>
+			<h4 class="header2" id='blue'>{this.username()} {this.usersurname()}</h4>
+			Buyer | Seller
+			<br/>
+			<br/>
+			<i class="material-icons">location_on</i>{this.userarea()}, {this.usercity()}<br/>
+			<i class="material-icons">phone</i>{this.usernumber()}<br/>
+			<br/>
+			<br/>
+		<button class="btn waves-effect waves-light light-blue lighten-1" 
+		type="submit" name="action">
+		settings <i class="material-icons right">settings</i>
+		</button>
 
-			<div class="col s8">
-				  <div class="section" id='user-info'>
-				    <h5 id='blue'>{this.username()} {this.usersurname()}</h5>
+		<button class="btn waves-effect waves-light light-blue lighten-1" 
+		type="submit" name="action" onClick={e =>this.logoutUser(e)}>
+		Log Out <i class="material-icons right">exit_to_app</i>
+		</button>
 
-					{this.useremail()} | Seller<br/>
-					{this.userarea()}, {this.usercity()}<br/>
-					{this.usernumber()}<br/>
-				    	<br/>
-					<a href='/' className='buttonStyle'>SETTINGS
-						<i class="material-icons right">settings</i>
-					</a>
-					<a href='/addproperty' className='buttonStyle'>ADD PROPERTY
-						<i class="material-icons right">home</i>
-					</a>
-
-				  </div>
-				  <div class="divider"></div>
-   			</div>
+					</div>
 				</div>
-
-			<div>
-			<h2 id='blue'>Dashboard</h2>	
-				{this.displayUser()}
 			</div>
+		
+			<div class="col s7">
+				<Dashboard/>
+			</div>
+		</div>
+
 		<Footer/>
 		</div>
 

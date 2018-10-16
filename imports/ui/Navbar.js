@@ -70,6 +70,8 @@ deleteAcc(){
 			    <li><a href='/about' class="waves-effect">About</a></li>
 			    <li><a href='/contact' class="waves-effect">Contact</a></li>
 			    <li><a href='/search' class="waves-effect">Search</a></li>
+			    <li><a href='/stepper' class="waves-effect">Stepper</a></li>
+<li><a href='/viewproperty' class="waves-effect">View</a></li>
 			    <li><div class="divider"></div></li>
 			    <li><a href='/profile' class="waves-effect waves-light">Profile</a></li>
 			    <li><a href='/addproperty' class="waves-effect">Add property</a></li>

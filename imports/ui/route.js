@@ -9,7 +9,7 @@ import Profile from './Profile.js';
 import Search from './Search.js';
 import Add from './Add.js';
 import Stepper from './Stepper.js';
-
+import View from './property/View.js';
 
 let open;
 open = FlowRouter.group({});
@@ -20,7 +20,7 @@ closed = FlowRouter.group({
         return FlowRouter.go("/signup");
       }
        else  {
-        return FlowRouter.go("/")
+        return FlowRouter.go("/profile")
       }
     }
   ]
@@ -89,6 +89,13 @@ FlowRouter.route('/stepper',{
 	name: 'Stepper',
 	action: ()=>{
 		mount(Stepper, {})
+	}
+});
+
+FlowRouter.route('/viewproperty',{
+	name: 'View',
+	action: ()=>{
+		mount(View, {})
 	}
 });
 

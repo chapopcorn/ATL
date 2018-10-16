@@ -167,9 +167,8 @@ createProp =(e)=>{
 		                    <div className="card-stacked">
 		                      <div className="card-content">
 					<h4 className="header" id ='blue'>{blog.title}</h4>
-		                        <h5 id ='bold'>K{blog.price}</h5>
-					<p id ='bold'>{blog.bed} Bedroom(s) {blog.bath} Bathroom(s) {blog.type} for  
-					 {blog.forsale} in {blog.location}</p>
+		                        <h5 id ='bold'>ZMW {blog.price}</h5>
+					<p id ='bold'>{blog.bed} Bedroom(s) {blog.bath} Bathroom(s) {blog.type} for {blog.forsale} in {blog.location}</p>
 		                        <p>{blog.description}
 		                        </p>
 		                        <p> Posted on:{blog.createdAt.toString()}

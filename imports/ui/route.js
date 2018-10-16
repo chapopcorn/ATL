@@ -10,6 +10,7 @@ import Search from './Search.js';
 import Add from './Add.js';
 import Stepper from './Stepper.js';
 import View from './property/View.js';
+import Settings from './accounts/settings.js';
 
 let open;
 open = FlowRouter.group({});
@@ -96,6 +97,13 @@ FlowRouter.route('/viewproperty',{
 	name: 'View',
 	action: ()=>{
 		mount(View, {})
+	}
+});
+
+FlowRouter.route('/settings',{
+	name: 'Settings',
+	action: ()=>{
+		mount(Settings, {})
 	}
 });
 

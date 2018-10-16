@@ -21,6 +21,7 @@ class Settings extends Component{
 			      </div>
 			    
 			</div>
+		</div>
 		);
 
 	}

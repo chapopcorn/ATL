@@ -157,10 +157,8 @@ displayUser=()=>{
 			<i class="material-icons">phone</i>{this.usernumber()}<br/>
 			<br/>
 			<br/>
-		<button class="btn waves-effect waves-light light-blue lighten-1" 
-		type="submit" name="action">
-		settings <i class="material-icons right">settings</i>
-		</button>
+<a class="waves-effect waves-light btn box-shadow waves-light light-blue lighten-1" href='/settings'>
+settings <i class="material-icons right">settings</i></a>
 
 		<button class="btn waves-effect waves-light light-blue lighten-1" 
 		type="submit" name="action" onClick={e =>this.logoutUser(e)}>

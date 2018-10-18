@@ -10,6 +10,14 @@ Meteor.methods({
 
 })
 
+Meteor.methods({
+	'addComment': (comments)=> {
+		Comments.insert(comments)
+}
+
+
+})
+
 
  
 

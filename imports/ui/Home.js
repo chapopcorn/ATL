@@ -102,7 +102,7 @@ displayUser=()=>{
     </div>
     <div className="carousel-item  white-text" id="carousrlimage" href="#one!">
 	<div id="divindiv">
-      <h1>ALT</h1>
+      <h4>ALT</h4>
       <p className="white-text">
 		ALT (Apartment Locator) is a property app that allows users to advertise
 	 	available land and homes for rent or sell (agent free) in Lusaka, at the same time
@@ -112,7 +112,7 @@ displayUser=()=>{
     </div>
     <div className="carousel-item white-text" id="carousrlimage1" href="#two!">
 	<div id="divindiv">
-      <h1>Our Goal</h1>
+      <h4>Our Goal</h4>
       <p className="white-text">
 		Createing and effective search component that filters the user's requirements.
 		Having two type of profiles for buyers and sellers
@@ -125,7 +125,7 @@ displayUser=()=>{
 
     <div className="carousel-item  white-text"  id="carousrlimage2" href="#three!">
 	<div id="divindiv"> 
-      <h1>The Solution</h1>
+      <h4>The Solution</h4>
       <p className="white-text">
 		Users can state, when sigining up, if they are a buyer or seller, as well as their search requirements eg. 
 		price range, province, area, home size etc.
@@ -138,7 +138,7 @@ displayUser=()=>{
 
     <div className="carousel-item  "  id="carousrlimage3" href="#four!">
 	<div id="divindiv">
-      <h1> Our Features</h1>
+      <h4> Our Features</h4>
       <p className="white-text">
 		Intelligent Filters
 		ATL has a number of features that helps our users find their perfect homes. Read more about our 
@@ -157,7 +157,7 @@ displayUser=()=>{
 
 		<div className='container'>
 				<div class='row'> 
-					<h2 align="center">Search Your Home</h2>
+					<h4 align="center" id='blue'>Search Your Home</h4>
 
 					  <form class="col s12">
 					    <div class="row">
@@ -184,7 +184,7 @@ displayUser=()=>{
 			</div>
 
 
-		<h2 className="header center">Latest Properties</h2>	
+		<h4 className="header center" id='blue'>Latest Properties</h4>	
 		{this.displayUser()}
 		<Footer/>
 		</div>

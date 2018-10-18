@@ -13,6 +13,7 @@ $(document).ready(function(){
 $('.carousel.carousel-slider').carousel({fullWidth: true});
 }
 
+
 	render(){
 		return(
 		<div class=''>

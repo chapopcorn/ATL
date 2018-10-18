@@ -102,19 +102,47 @@ myLoc=()=>{
     )
     };
 
+myLinear=()=>{
+      const blog = this.props.blog;
+      return blog.map((blog) => {
+      const link = Images.findOne({'meta.key':blog.title}).link();
+        return (
+          <div key = {blog._id}>
+
+
+    	     <div class="row">
+   		 <div class="col s4">
+ 			<img src={link} alt={blog.title} width={200} height={150}/>
+ 		 </div>
+
+   		 <div class="col s8">
+		<h5 id='blue'>{blog.title}</h5>
+ 		<p id ='bold'>{blog.bed} Bedroom {blog.bath} Bathroom {blog.type} 
+		 on sale in {blog.location}</p>
+		<a class="waves-effect waves-light btn box-shadow light-blue lighten-1" 
+		onClick={e => this.newPage(e, blog._id)}>View Property</a>
+ 		 </div>
+            </div>
+
+	</div>
+        )
+      }
+    )
+    };
+
 	render(){
 		return(
 			<div>	
 			   <div class="row">
 	
 			     <div class="col s12">
-					<h4 class="header2" id='blue'>Dashboard</h4>
+					<h4 class="header2" id='blue'>DASHBOARD</h4>
 			      </div>
 			    </div>
 			   <div class="row">
 	
 			     <div class="col s12">
-					{this.myLoc()}
+					{this.myLinear()}
 			      </div>
 			    </div>
 			</div>

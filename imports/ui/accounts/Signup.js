@@ -76,7 +76,7 @@ handleImages = (e) => {
 	            console.log(err.reason);
 	          }
 	          else {
-	        FlowRouter.go('/profile')
+	        FlowRouter.go('/')
 	         }
 	       }
 	      );

@@ -32,6 +32,12 @@ componentDidMount(){
 	
 }
 
+newPage = (e, propertyId) => {
+	e.preventDefault();
+	Session.set('property', propertyId)
+	FlowRouter.go('/viewproperty')
+}
+
 displayUser=()=>{
       const blog = this.props.blog;
 
@@ -49,21 +55,24 @@ displayUser=()=>{
                           <div className="card horizontal">
 
                             <div className="card-image width-65">
-                              <img src={link} width={250} height={300}/>
+                              <img src={link} alt={blog.title} width={800} height={400}/>
                             </div>
 
                             <div className="card-stacked">
                               <div className="card-content">
 				<h4 className="header" id ='blue'>{blog.title}</h4>
                                 <h5 id ='bold'>ZMW {blog.price}</h5>
-				<p id ='bold'>{blog.bed} Bedroom(s) {blog.bath} Bathroom(s) {blog.type} for sale in {blog.location}</p>
+				<p id ='bold'>{blog.bed} Bedroom(s) {blog.bath} Bathroom(s) {blog.type} on sale in {blog.location}</p>
                                 <p>{blog.description}
                                 </p>
                                 <p> Posted on: {blog.createdAt.toString()}
                                 </p>
+		                <p> Posted By: {blog.username} {blog.usersurname}
+		                </p>
                               </div>
                               <div className="card-action border-none">
-                                <a className="waves-effect waves-light btn box-shadow light-blue lighten-1">Contact Owner</a>
+		        <a class="waves-effect waves-light btn box-shadow light-blue lighten-1" onClick={e => this.newPage(e, blog._id)}>
+			View Property</a>
                               </div>
                             </div>
 

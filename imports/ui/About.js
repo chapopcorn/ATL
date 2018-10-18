@@ -34,7 +34,7 @@ $('.carousel.carousel-slider').carousel({fullWidth: true});
 					
      				 </div>
      			</div>
-
+<div class="divider"></div>
 			<div class='row'> 
 				<div class="col s12">
 				<h3 align="center">Our Features</h3>
@@ -58,62 +58,77 @@ $('.carousel.carousel-slider').carousel({fullWidth: true});
 			</div>
 
     			</div>
+
+<div class="divider"></div>
 			<div class='row'> 
 				<div class="col s12">
 				<h3 align="center">Meet The Team</h3>
-				ALT (Apartment Locator) is a property app that allows users to
+				At we are dedicated to providing a service that helps our community. Meet the team that put this website togethert. ALT (Apartment Locator) is a property app that allows users to
 				advertise available land and homes for rent or sell (agent free),
 				at the same time it also allows user to look for land and homes as.
 			</div>
 
     			</div>
-<div class="row">
-  <div class="col m4">
-    <div class="card">
-      <div class="card-image">
-        <img src="images/card.jpg"/>
-        <span class="card-title activator white-text">Jackie Chapoloko</span>
-      </div>
-      <div class="card-content">
-        <p>Im still not at the level I would like to be, but I'm growing 
-          my developer skills each day thanks to Hackers Guild!!!</p>
-        <a href="#" class='center' ><img src="images/twitter.png"  alt="twitter icon"/></a>
-	<a href="#" class='center'><img src="images/github.png"  alt="github icon"/></a>
-	<a href="#" class='center'><img src="images/email.png"  alt="email icon"/></a>
-      </div>
-    </div>
-  </div>
-   <div class="col m4">
-    <div class="card">
-      <div class="card-image">
-        <img src="images/card.jpg"/>
-        <span class="card-title activator white-text">Alvin Mwewa</span>
-      </div>
-      <div class="card-content">
-                <p>Im still not at the level I would like to be, but I'm growing 
-          my developer skills each day thanks to Hackers Guild!!!</p>
-        <a href="#" class='center' ><img src="images/twitter.png"  alt="twitter icon"/></a>
-	<a href="#" class='center'><img src="images/github.png"  alt="github icon"/></a>
-	<a href="#" class='center'><img src="images/email.png"  alt="email icon"/></a>
-      </div>
-    </div>
-  </div>
-  <div class="col m4">
-    <div class="card">
-      <div class="card-image">
-        <img src="images/card.jpg"/>
-        <span class="card-title activator white-text">Grace Banda</span>
-      </div>
-      <div class="card-content">
-                <p>Im still not at the level I would like to be, but I'm growing 
-          my developer skills each day thanks to Hackers Guild!!!</p>
-        <a href="#" class='center' ><img src="images/twitter.png"  alt="twitter icon"/></a>
-	<a href="#" class='center'><img src="images/github.png"  alt="github icon"/></a>
-	<a href="#" class='center'><img src="images/email.png"  alt="email icon"/></a>
-      </div>
-    </div>
-  </div>
-</div>
+ 		
+                <div id="card-reveal" class="section">
+                  <div class="row">
+                    <div class="col s12">
+                    </div>
+                    <div class="col s12">
+                      <div class="row">
+                        <div class="col s12 m4">
+                          <div class="card">
+                            <div class="card-image">
+                              <img src="images/emma.png"/>
+                              <a class="btn-floating halfway-fab waves-effect waves-light blue left"
+			 href='https://github.com/chapopcorn'>
+                                <i class="material-icons">share</i>
+                              </a>
+                            </div>
+                            <div class="card-content">
+                              <h5 class="center font-weight-400">JACKIE CHAPOLOKO</h5>
+                              <p class="center">Front-End Developer</p>
+                              <div></div>
+                              
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col s12 m4">
+                          <div class="card">
+                            <div class="card-image">
+                              <img src="images/piter.png"/>
+                              <a class="btn-floating halfway-fab waves-effect waves-light red left"
+				href='https://github.com/alvinmwewa'>
+                                <i class="material-icons">share</i>
+                              </a>
+                            </div>
+                            <div class="card-content">
+                              <h5 class="center font-weight-400">ALVIN <br/>MWEWA</h5>
+                              <p class="center">Developer</p>
+                              <div ></div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col s12 m4">
+                          <div class="card">
+                            <div class="card-image">
+                              <img src="images/charlotte.png"/>
+                              <a class="btn-floating halfway-fab waves-effect waves-light red left"
+				href='https://github.com/chapopcorn'>
+                                <i class="material-icons">share</i>
+                              </a>
+                            </div>
+                            <div class="card-content">
+                              <h5 class="center font-weight-400">GRACE <br/>BANDA</h5>
+                              <p class="center">Developer</p>
+                              <div></div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
 
 		
 		</div>

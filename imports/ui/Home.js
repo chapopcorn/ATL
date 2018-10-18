@@ -157,7 +157,7 @@ displayUser=()=>{
 
 		<div className='container'>
 				<div class='row'> 
-					<h4 align="center" id='blue'>Search Your Home</h4>
+					<h4 align="center" id='blue'>SEARCH FOR YOUR HOME</h4>
 
 					  <form class="col s12">
 					    <div class="row">
@@ -184,7 +184,7 @@ displayUser=()=>{
 			</div>
 
 
-		<h4 className="header center" id='blue'>Latest Properties</h4>	
+		<h4 className="header center" id='blue'>LATEST PROPERTIES</h4>	
 		{this.displayUser()}
 		<Footer/>
 		</div>

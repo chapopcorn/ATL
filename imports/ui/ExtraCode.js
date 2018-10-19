@@ -313,3 +313,15 @@ PropertyIndex = new EasySearch.Index({
 				  <div class="divider"></div>
    			</div>
 
+
+/////////////////////////////////////////////////////Email Submit
+
+<div onclick="doMail();">
+
+
+function doMail() {
+
+    var email ="xyz@abc.com";
+    location.href = "mailto:"+email;
+}
+

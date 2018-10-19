@@ -32,6 +32,12 @@ componentDidMount(){
 	
 }
 
+newPage = (e, propertyId) => {
+	e.preventDefault();
+	Session.set('property', propertyId)
+	FlowRouter.go('/viewproperty')
+}
+
 displayUser=()=>{
       const blog = this.props.blog;
 
@@ -49,21 +55,24 @@ displayUser=()=>{
                           <div className="card horizontal">
 
                             <div className="card-image width-65">
-                              <img src={link} width={250} height={300}/>
+                              <img src={link} alt={blog.title} width={800} height={400}/>
                             </div>
 
                             <div className="card-stacked">
                               <div className="card-content">
 				<h4 className="header" id ='blue'>{blog.title}</h4>
                                 <h5 id ='bold'>ZMW {blog.price}</h5>
-				<p id ='bold'>{blog.bed} Bedroom(s) {blog.bath} Bathroom(s) {blog.type} for sale in {blog.location}</p>
+				<p id ='bold'>{blog.bed} Bedroom(s) {blog.bath} Bathroom(s) {blog.type} on sale in {blog.location}</p>
                                 <p>{blog.description}
                                 </p>
                                 <p> Posted on: {blog.createdAt.toString()}
                                 </p>
+		                <p> Posted By: {blog.username} {blog.usersurname}
+		                </p>
                               </div>
                               <div className="card-action border-none">
-                                <a className="waves-effect waves-light btn box-shadow light-blue lighten-1">Contact Owner</a>
+		        <a class="waves-effect waves-light btn box-shadow light-blue lighten-1" onClick={e => this.newPage(e, blog._id)}>
+			View Property</a>
                               </div>
                             </div>
 
@@ -93,7 +102,7 @@ displayUser=()=>{
     </div>
     <div className="carousel-item  white-text" id="carousrlimage" href="#one!">
 	<div id="divindiv">
-      <h1>ALT</h1>
+      <h4>ALT</h4>
       <p className="white-text">
 		ALT (Apartment Locator) is a property app that allows users to advertise
 	 	available land and homes for rent or sell (agent free) in Lusaka, at the same time
@@ -116,7 +125,7 @@ displayUser=()=>{
 
     <div className="carousel-item  white-text"  id="carousrlimage2" href="#three!">
 	<div id="divindiv"> 
-      <h1>The Solution</h1>
+      <h4>The Solution</h4>
       <p className="white-text">
 		Users can state, when sigining up, if they are a buyer or seller, as well as their search requirements eg. 
 		price range, province, area, home size etc.
@@ -129,7 +138,7 @@ displayUser=()=>{
 
     <div className="carousel-item  "  id="carousrlimage3" href="#four!">
 	<div id="divindiv">
-      <h1> Our Features</h1>
+      <h4> Our Features</h4>
       <p className="white-text">
 		Intelligent Filters
 		ATL has a number of features that helps our users find their perfect homes. Read more about our 
@@ -148,7 +157,7 @@ displayUser=()=>{
 
 		<div className='container'>
 				<div class='row'> 
-					<h2 align="center">Search Your Home</h2>
+					<h4 align="center" id='blue'>SEARCH FOR YOUR HOME</h4>
 
 					  <form class="col s12">
 					    <div class="row">
@@ -175,7 +184,7 @@ displayUser=()=>{
 			</div>
 
 
-		<h2 className="header center">Latest Properties</h2>	
+		<h4 className="header center" id='blue'>LATEST PROPERTIES</h4>	
 		{this.displayUser()}
 		<Footer/>
 		</div>

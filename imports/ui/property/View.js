@@ -58,45 +58,85 @@ class View extends Component{
 	    )
 	    }
 
+sendEmail =(e)=>{
+	e.preventDefault();
+	
+ 	window.location = "mailto:jchapoloko@gmail.com"
+	
+	alert('Property Added');
+	
+}
+
+
 
 
 
 	displayProp=()=>{	
 	      	const blog = this.props.blog;
+		const email = blog.title;
+		const mail = 'mailto:' + email;
 	      	return blog.map((blog) => {
 		const link = Images.findOne({'meta.key':blog.title}).link();
 			return (
 		  <div key = {blog._id}>
-			
-				<div className="row">
-				    	<div className="col s2">
+			<div className="container">
+				<div className="row center">
+				    	
+				    	<div className="col s12">
+		<br/>
+		<br/>
+					<img src={link} alt={blog.title} class='view-img'/>
 					</div>
-				    	<div className="col s8">
-
-					<img src={link} alt={blog.title} width={600} height={600}/>
-					</div>
-				    	<div className="col s2">
-					</div>
+				    	
 
 				</div>
-			<div className="container">
+			
+
+
 		            	<div className="row">
 				    	<div className="col s12">
 						<h4 className="header" id ='blue'>{blog.title}</h4>
-					</div>
-				</div>
-
-		            	<div className="row">
-				    	<div className="col s12">
-						<p className="header" id ='bold'>
-{blog.bed} Bedroom(s) {blog.bath} Bathroom(s) {blog.type} for {blog.forsale} in {blog.location}
-						</p>
 						<p>{blog.description}
 						</p>
-						 <a class="waves-effect waves-light btn box-shadow waves-light light-blue lighten-1">
-					Contact Owner</a>
+
 					</div>
 				</div>
+<div className="divider"></div>
+		            	<div className="row">
+				    	<div className="col s12">
+					<h4 className="header" id ='blue'>Features</h4>
+		            	<div className="row">
+				    	<div className="col s6">
+					<span id='bold'> Bedrooms: </span><br/>
+					{blog.bed}
+
+					</div>
+				
+				    	<div className="col s6">
+					<span id='bold'> Bathrooms: </span><br/>					{blog.bath}
+
+					</div>
+				</div>
+		            	<div className="row">
+				    	<div className="col s6">
+					<span id='bold'> Location: </span><br/>
+					{blog.location}, Lusaka
+
+					</div>
+				
+				</div>
+
+					</div>
+				</div>
+					
+		            		<div className="row">
+				
+					<div className="col s12">
+		                							<a class="waves-effect waves-light btn box-shadow waves-light light-blue lighten-1" href={mail}>
+					Contact Owner</a>
+					</div>
+					</div>
+
 			</div>
 		  </div>
 		)

@@ -97,6 +97,9 @@ createProp =(e)=>{
 	const title = this.state.title;
 	const location = this.state.location;
 	const description = this.state.description;
+	const username = Meteor.user().profile.name
+	const usersurname = Meteor.user().profile.surname
+	const useremail = Meteor.user().profile.email
 	const bed = this.state.bed;
 	const bath = this.state.bath;
 	const price = this.state.price;
@@ -132,7 +135,7 @@ createProp =(e)=>{
     }
 
 	const user = {
-	title, location, type, description, bath, bed, price, forsale
+	title, location, type, description, bath, bed, price, forsale, username, usersurname, useremail
 	}
 	Meteor.call('addProperty', user)
 
@@ -162,7 +165,7 @@ createProp =(e)=>{
 		                <div className="col s12">
 		                  <div className="card horizontal">
 		                    <div className="card-image width-65">
-		                      <img src={link} alt={blog.title} width={400} height={400}/>
+		                      <img src={link} alt={blog.title} width={800} height={400}/>
 		                    </div>
 		                    <div className="card-stacked">
 		                      <div className="card-content">
@@ -173,7 +176,7 @@ createProp =(e)=>{
 		                        </p>
 		                        <p> Posted on:{blog.createdAt.toString()}
 		                        </p>
-		                        <p> Posted By:
+		                        <p> Posted By: {blog.username} {blog.usersurname}
 		                        </p>
 		                      </div>
 		                      <div className="card-action border-none">

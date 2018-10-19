@@ -25,6 +25,10 @@ const Images = new FilesCollection({collectionName: 'images', storagePath: 'uplo
 const ProfileImages = new FilesCollection({collectionName: 'profileImages', storagePath: 'uploads/profile'
 });
 
+const Comments = new Mongo.Collection('comments')
+
+export {Comments}; 
+
 export {Images};
 
 export {ProfileImages};

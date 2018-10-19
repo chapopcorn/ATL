@@ -98,7 +98,7 @@ console.log(JSON.stringify(data))
     			</div>
 			<div class='container'>
 				<div class='row'> 
-					<h2 align="center">Search For Your Home</h2>
+				<h4 align="center" id='blue'>SEARCH FOR YOUR HOME</h4>
 
 					  <form class="col s12">
 					    <div class="row">

@@ -18,7 +18,7 @@ class Login extends React.Component{
 	      console.log(error.reason);
 	      }
 	      else {
-	        FlowRouter.go('/profile')
+	        FlowRouter.go('/')
 	      }
 	    }
 	  );

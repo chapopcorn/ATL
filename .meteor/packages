@@ -24,7 +24,7 @@ accounts-password
 static-html
 materialize:materialize
 accounts-base
-meteortoys:allthings
+# meteortoys:allthings
 react-meteor-data
 cfs:standard-packages
 ostrio:files

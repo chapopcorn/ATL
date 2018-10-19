@@ -26,7 +26,7 @@ componentDidMount(){
 	 $('#demo-carousel-content').carousel();
 	  setInterval(function() {
 	    $('.carousel.carousel-slider').carousel('next');
-	  }, 12000);
+	  }, 15000);
 
 	});
 	
@@ -62,12 +62,11 @@ displayUser=()=>{
                               <div className="card-content">
 				<h4 className="header" id ='blue'>{blog.title}</h4>
                                 <h5 id ='bold'>ZMW {blog.price}</h5>
-				<p id ='bold'>{blog.bed} Bedroom(s) {blog.bath} Bathroom(s) {blog.type} on sale in {blog.location}</p>
-                                <p>{blog.description}
-                                </p>
+				<p id ='bold'>{blog.bed} Bedroom(s) {blog.bath} Bathroom(s) {blog.type} to {blog.forsale} in {blog.location}</p>
+                                
                                 <p> Posted on: {blog.createdAt.toString()}
                                 </p>
-		                <p> Posted By: {blog.username} {blog.usersurname}
+		                <p id='bold'> Posted By: {blog.username} {blog.usersurname}
 		                </p>
                               </div>
                               <div className="card-action border-none">
@@ -102,9 +101,9 @@ displayUser=()=>{
     </div>
     <div className="carousel-item  white-text" id="carousrlimage" href="#one!">
 	<div id="divindiv">
-      <h4>ALT</h4>
+      <h4>ATL</h4>
       <p className="white-text">
-		ALT (Apartment Locator) is a property app that allows users to advertise
+		ATL (Apartment Locator) is a property app that allows users to advertise
 	 	available land and homes for rent or sell (agent free) in Lusaka, at the same time
 	  	it also allows user to look for land and homes as well.
       </p>

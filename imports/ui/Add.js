@@ -130,7 +130,7 @@ createProp =(e)=>{
  	uploadInstance.on('uploaded', function ( fileObj) {
           console.log('file has been uploaded: ' + fileObj)
         });
-
+				FlowRouter.go('/')
        uploadInstance.start(); 
     }
 
@@ -207,7 +207,7 @@ createProp =(e)=>{
                    <div className="row">
 
                        <div className="input-field col s10">
-                       <i className="material-icons prefix">home</i>
+                       <i className="material-icons prefix">edit_mode</i>
                          <input id="icon_prefix" type="text" className="validate" name='title' onChange={this.handleTitle}/>
                          <label for="icon_prefix">Title</label>
                        </div>
@@ -237,7 +237,7 @@ createProp =(e)=>{
 
 		   
 			 <div class="input-field col s4">
- 			   <i class="material-icons prefix">home</i>
+ 			   <i class="material-icons prefix">business</i>
                            <input id="icon_prefix" type="text" class="validate" name='type' onChange={this.handleType}/>
                            <label for="icon_prefix">Type of home</label>
 
@@ -252,7 +252,7 @@ createProp =(e)=>{
                        
                        </div>
                        <div class="input-field col s4">
-                         <i class="material-icons prefix">home</i>
+                         <i class="material-icons prefix">directions_walk</i>
                          <input id="icon_email" type="text" class="validate" name='bath' onChange={this.handleBath}/>
                          <label>Bathrooms</label>
                        </div>
@@ -270,7 +270,7 @@ createProp =(e)=>{
 
                    <div class="row">
                        <div class="input-field col s12">
-                        <i class="material-icons prefix">mode_edit</i>
+                        <i class="material-icons prefix">description</i>
                         <textarea id="icon_prefix2" class="materialize-textarea" name='description' onChange={this.handleDescription}></textarea>
                        <label for="icon_prefix2">Description</label>
                        </div>

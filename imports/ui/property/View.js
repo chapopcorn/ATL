@@ -61,7 +61,7 @@ class View extends Component{
 sendEmail =(e)=>{
 	e.preventDefault();
 	
- 	window.location = "mailto:jchapoloko@gmail.com"
+ 	window.location = "mailto:jacchapoloko@gmail.com"
 	
 	alert('Property Added');
 	
@@ -73,8 +73,8 @@ sendEmail =(e)=>{
 
 	displayProp=()=>{	
 	      	const blog = this.props.blog;
-		const email = blog.title;
-		const mail = 'mailto:' + email;
+		const email = blog.useremail;
+		const mail = "mailto:jacchapoloko@gmail.com";
 	      	return blog.map((blog) => {
 		const link = Images.findOne({'meta.key':blog.title}).link();
 			return (
@@ -121,6 +121,12 @@ sendEmail =(e)=>{
 				    	<div className="col s6">
 					<span id='bold'> Location: </span><br/>
 					{blog.location}, Lusaka
+
+					</div>
+
+									    	<div className="col s6">
+					<span id='bold'> Posted By: </span><br/>
+					{blog.username} {blog.usersurname}
 
 					</div>
 				

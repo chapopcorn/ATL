@@ -117,8 +117,8 @@ myLinear=()=>{
 
    		 <div class="col s8">
 		<h5 id='blue'>{blog.title}</h5>
- 		<p id ='bold'>{blog.bed} Bedroom {blog.bath} Bathroom {blog.type} 
-		 on sale in {blog.location}</p>
+ 		<p id ='bold'>{blog.bed} Bedroom {blog.bath} Bathroom {blog.type}  
+		 to  {blog.forsale} in {blog.location}</p>
 		<a class="waves-effect waves-light btn box-shadow light-blue lighten-1" 
 		onClick={e => this.newPage(e, blog._id)}>View Property</a>
  		 </div>

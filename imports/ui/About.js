@@ -40,18 +40,18 @@ $('.carousel.carousel-slider').carousel({fullWidth: true});
 				<div class="col s12">
 				<h4 align="center" id='blue'>OUR FEATURES</h4>
 				<div class="col s4">
-					<Image src="images/look.png" width={200} height={200} alt="search icon"/><br/>
+					<Image src="images/look.png" class='responsive-img' width={200} height={200} alt="search icon"/><br/>
         				<span id='bold'>INTELLIGENT FILTER</span><br/>
 					A filter that to narrows the user’s search down and ensure their relevance.
      				 </div>
      				 <div class="col s4">
-					<Image src="images/chat.png" width={200} height={200} alt="chat icon"/><br/>
+					<Image src="images/chat.png" class='responsive-img' width={200} height={200} alt="chat icon"/><br/>
        					<span id='bold'>CONNECT TO USERS</span><br/>
-					Contact the seller/buyer with just a tap. Message the advertisers
+					Contact the seller/buyer with just a tap. Send an email to the advertisers
 					instantly. 
       				</div>
       				<div class="col s4">
-					<Image src="images/location.png" width={200} height={200} alt="loc icon"/><br/>
+					<Image src="images/location.png" class='responsive-img' width={200} height={200} alt="loc icon"/><br/>
         				<span id='bold'>SMART INTEGRATION</span><br/>
 					Our App smartly locates properties that lie within your preferred locality.
 					
@@ -80,15 +80,15 @@ $('.carousel.carousel-slider').carousel({fullWidth: true});
                         <div class="col s12 m4">
                           <div class="card">
                             <div class="card-image">
-                              <img src="images/emma.png"/>
+                              <img src="images/jackie.png"/>
                               <a class="btn-floating halfway-fab waves-effect waves-light blue left"
 			 href='https://github.com/chapopcorn'>
                                 <i class="material-icons">share</i>
                               </a>
                             </div>
                             <div class="card-content">
-                              <h5 class="center font-weight-400">JACKIE CHAPOLOKO</h5>
-                              <p class="center">Front-End Developer</p>
+                              <h5 class="center font-weight-400">JACKIE <br/>CHAPOLOKO</h5>
+                              <p class="center">Developer</p>
                               <div></div>
                               
                             </div>
@@ -97,7 +97,7 @@ $('.carousel.carousel-slider').carousel({fullWidth: true});
                         <div class="col s12 m4">
                           <div class="card">
                             <div class="card-image">
-                              <img src="images/piter.png"/>
+                              <img src="images/alvin.jpg"/>
                               <a class="btn-floating halfway-fab waves-effect waves-light red left"
 				href='https://github.com/alvinmwewa'>
                                 <i class="material-icons">share</i>
@@ -113,9 +113,9 @@ $('.carousel.carousel-slider').carousel({fullWidth: true});
                         <div class="col s12 m4">
                           <div class="card">
                             <div class="card-image">
-                              <img src="images/charlotte.png"/>
+                              <img src="images/grace.jpg"/>
                               <a class="btn-floating halfway-fab waves-effect waves-light red left"
-				href='https://github.com/chapopcorn'>
+				href='https://github.com/Gracebanda18'>
                                 <i class="material-icons">share</i>
                               </a>
                             </div>

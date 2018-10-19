@@ -65,7 +65,7 @@ FlowRouter.route('/signup',{
 	}
 });
 
-loggedIn.route('/profile',{
+FlowRouter.route('/profile',{
 	name: 'Profile',
 	action: ()=>{
 		mount(Profile, {})
@@ -79,7 +79,7 @@ FlowRouter.route('/search',{
 	}
 });
 
-loggedIn.route('/addproperty',{
+FlowRouter.route('/addproperty',{
 	name: 'Add',
 	action: ()=>{
 		mount(Add, {})
@@ -100,7 +100,7 @@ FlowRouter.route('/viewproperty',{
 	}
 });
 
-loggedIn.route('/settings',{
+FlowRouter.route('/settings',{
 	name: 'Settings',
 	action: ()=>{
 		mount(Settings, {})

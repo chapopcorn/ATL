@@ -98,7 +98,7 @@ color: #4fc3f7;
 
 #divindiv{
   
-  padding-bottom:99px;
+  padding-bottom:50px;
   padding-left: 300px;
   padding-right: 300px;
   background-color: #060606b3;
@@ -160,24 +160,26 @@ margin-right: 50px;
 }
 
 #carousrlimage{
-  background-image: url('images/Windhoek-City-Views.jpg');
+  background-image: url('images/royal-livingstone-resort-exterior.jpg');
   color: #4fc3f7;
-  padding-bottom: 130px
+  background-size: cover;
+ 
 }
 
 #carousrlimage1{
-  background-image: url('images/outside.jpg');
+  background-image: url('images/website-design-background-1.jpg');
   color: #4fc3f7;
 }
 
 #carousrlimage2{
-  background-image: url('images/GI_exterior02_24_698x390_FitToBoxSmallDimension_Center.jpg');
+  background-image: url('images/08-rochester-made-background-photography-website.png');
   color: #4fc3f7;
 }
 
 #carousrlimage3{
-  background-image: url('images/Lusaka-city.jpg');
+  background-image: url('images/carousel 4.jpeg');
   color: #4fc3f7;
+  background-size: cover;
 }
 
 

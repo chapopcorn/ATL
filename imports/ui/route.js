@@ -14,14 +14,14 @@ import Settings from './accounts/settings.js';
 
 let open;
 open = FlowRouter.group({});
-closed = FlowRouter.group({
+loggedIn = FlowRouter.group({
   triggersEnter:[
     function(){
       if(!(Meteor.loggingIn() || Meteor.userId())) {
         return FlowRouter.go("/signup");
       }
        else  {
-        return FlowRouter.go("/profile")
+        return FlowRouter.go("/")
       }
     }
   ]
@@ -65,7 +65,7 @@ FlowRouter.route('/signup',{
 	}
 });
 
-FlowRouter.route('/profile',{
+loggedIn.route('/profile',{
 	name: 'Profile',
 	action: ()=>{
 		mount(Profile, {})
@@ -79,7 +79,7 @@ FlowRouter.route('/search',{
 	}
 });
 
-FlowRouter.route('/addproperty',{
+loggedIn.route('/addproperty',{
 	name: 'Add',
 	action: ()=>{
 		mount(Add, {})
@@ -100,7 +100,7 @@ FlowRouter.route('/viewproperty',{
 	}
 });
 
-FlowRouter.route('/settings',{
+loggedIn.route('/settings',{
 	name: 'Settings',
 	action: ()=>{
 		mount(Settings, {})

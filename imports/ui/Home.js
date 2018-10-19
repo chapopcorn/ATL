@@ -26,7 +26,7 @@ componentDidMount(){
 	 $('#demo-carousel-content').carousel();
 	  setInterval(function() {
 	    $('.carousel.carousel-slider').carousel('next');
-	  }, 6000);
+	  }, 12000);
 
 	});
 	
@@ -102,7 +102,7 @@ displayUser=()=>{
   </div> 
     </div>
     <div className="carousel-item white-text" id="carousrlimage1" href="#two!">
-	<div id="divindiv">
+	
       <h1>Our Goal</h1>
       <p className="white-text">
 		Createing and effective search component that filters the user's requirements.
@@ -111,7 +111,7 @@ displayUser=()=>{
 		Having a minimum of 20 listings on the website when it launches
 		Custome dashboard for each user depending on their requirements
 	</p>
-</div>
+
     </div>
 
     <div className="carousel-item  white-text"  id="carousrlimage2" href="#three!">
